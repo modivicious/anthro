@@ -1,0 +1,337 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+//----------- header -----------
+
+.header {
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 400;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/icons/burger-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__list {
+    display: flex;
+    gap: 13px;
+  }
+  &__link {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__link--search {
+    background-image: url("../images/icons/search.svg");
+  }
+  &__link--cart {
+    background-image: url("../images/icons/cart.svg");
+  }
+  &__link--heart {
+    background-image: url("../images/icons/heart.svg");
+    position: relative;
+  }
+  &__count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $default;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    color: $main-gray;
+    font-size: 5px;
+    line-height: 8px;
+    text-align: center;
+  }
+}
+
+//----------- intro -----------
+
+.intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__bg {
+    height: calc(100vh - 213px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__descr {
+    padding: 22px 0;
+    background-color: #10131b;
+    color: $main-gray;
+    p {
+      font-size: 15px;
+      line-height: 1.3;
+      margin-bottom: 21px;
+    }
+  }
+  &__title {
+    @extend %neue-300;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  &__btn {
+    @extend %mont-700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-bottom: 2px solid $main-gray;
+  }
+}
+
+//----------- offers -----------
+
+.offers {
+  padding: 60px 0 80px;
+  &__inner {
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 21px;
+    }
+  }
+  &__link-box {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__categories {
+    margin-top: 60px;
+    display: grid;
+    grid-template-rows: repeat(4, 211px);
+    gap: 16px;
+  }
+  &__category {
+    position: relative;
+    @extend %mont-500;
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__box {
+    width: max-content;
+    margin-left: auto;
+    padding: 28px 20px;
+  }
+  &__name {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin-bottom: 5px;
+  }
+  &__link {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $default;
+    &:focus-visible {
+      outline: none;
+    }
+    &:focus-visible::before {
+      outline: 2px solid $default;
+      outline-offset: -2px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+//----------- benefits -----------
+
+.benefits {
+  padding: 30px 0 40px;
+  background-color: $main-gray;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+    padding-top: 63px;
+    p {
+      line-height: 1.3;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 58px;
+      height: 58px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__item--car::before {
+    background-image: url("../images/icons/car.svg");
+  }
+  &__item--service::before {
+    background-image: url("../images/icons/service.svg");
+  }
+  &__item--box::before {
+    background-image: url("../images/icons/box.svg");
+  }
+  &__name {
+    @extend %neue-500;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+}
+
+//----------- bestsellers -----------
+
+.bestsellers {
+  padding: 70px 0;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px 15px;
+    margin-bottom: 24px;
+  }
+}
+
+.product-item {
+  @extend %neue-400;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+  &__img {
+    height: 214px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 7px;
+  }
+  &__name {
+    margin-bottom: 3px;
+  }
+  &__price {
+    color: #9c9fa6;
+  }
+  &__old-price {
+    text-decoration: line-through;
+    color: #c4c4c4;
+    margin-left: 8px;
+  }
+  &::before {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    @extend %mont-500;
+    letter-spacing: 0.03em;
+    color: #c7011c;
+  }
+  &--sale {
+    &::before {
+      content: "sale";
+    }
+    .product-item__price {
+      color: #c7011c;
+    }
+  }
+  &--new {
+    &::before {
+      content: "new";
+      color: $default;
+    }
+  }
+}
+
+//----------- feedback -----------
+
+.feedback {
+  &__slider {
+    .slick-arrow {
+      position: absolute;
+      top: 75px;
+      width: 44px;
+      height: 44px;
+      z-index: 30;
+    }
+    .slick-prev {
+      left: -16px;
+    }
+    .slick-next {
+      right: -16px;
+    }
+  }
+  &__slide {
+    text-align: center;
+    p {
+      @extend %mont-500;
+      line-height: 1.7;
+      max-width: 241px;
+      margin: 0 auto 52px;
+    }
+    background-image: url("../images/quote.svg");
+    background-repeat: no-repeat;
+    background-size: 155px 148px;
+    background-position: center top;
+  }
+  &__avatar {
+    margin: 0 auto;
+    height: 69px;
+    width: 69px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 23px;
+  }
+  &__author {
+    @extend %mont-700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+//----------- blog-intro -----------
+
+.blog-intro {
+  padding: 100px 0 70px;
+}
+
+@import "media";

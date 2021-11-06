@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  @extend %mont-400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $default;
+  background-color: #fff;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title{
+  @extend %neue-400;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.link {
+  @extend %mont-700;
+  text-transform: uppercase;
+  border-bottom: 2px solid $default;
+  color: $default;
+  letter-spacing: 0.03em;
+}
+
+.link-box{
+  text-align: center;
+}
