@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Furniture Shop | Anthro</title>
+  <title>Buy Furniture Online | Anthro</title>
+  <link rel="icon" href="images/favicon/favicon.svg">
+  <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -18,7 +22,7 @@
       <button class="menu__btn menu__btn-close" type="button" aria-label="Close navigation menu">
       </button>
 
-      <div class="menu__overlay" role="button"></div>
+      <div class="menu__overlay" role="button" aria-hidden="true"></div>
 
       <ul class="menu__list">
         <li class="menu__item">
@@ -37,7 +41,7 @@
           </a>
         </li>
       </ul>
-      <a class="menu__logo logo" href="#">
+      <a class="menu__logo logo" href="#" aria-label='Anthro logo, return to home page'>
         <img src="images/logo.svg" alt="logo">
       </a>
       <ul class="menu__icons">
@@ -62,11 +66,12 @@
   </header>
 
   <main class="main">
+    <h1 class="homepage-accessibility-heading" aria-label="Furniture Online Store"></h1>
     <section class="intro">
       <div class="intro__bg" style="background-image: url(images/intro-bg.jpg)"></div>
       <div class="intro__descr">
         <div class="container">
-          <h1 class="intro__title">Set the Mood</h1>
+          <h2 class="intro__title">Set the Mood</h2>
           <p>
             Create a comfortable
             and welcoming space to relax
@@ -149,7 +154,7 @@
     </section>
     <section class="benefits">
       <div class="container">
-        <ul class="benefits__list">
+        <ul class="benefits__list" aria-label="Our benefits">
           <li class="benefits__item benefits__item--car">
             <h3 class="benefits__name">Store Pickup</h3>
             <p>
@@ -178,7 +183,7 @@
         <ul class="bestsellers__list">
           <li class="product-item product-item--sale">
             <div class="product-item__img-box">
-              <a class="link-focus" href="#">
+              <a class="link-focus" href="#" aria-label="Go to product">
                 <img class="product-item__img" src="images/content/bestsellers/1.jpg" alt="">
               </a>
             </div>
@@ -188,7 +193,7 @@
           </li>
           <li class="product-item">
             <div class="product-item__img-box">
-              <a class="link-focus" href="#">
+              <a class="link-focus" href="#" aria-label="Go to product">
                 <img class="product-item__img" src="images/content/bestsellers/2.jpg" alt="">
               </a>
             </div>
@@ -197,17 +202,17 @@
           </li>
           <li class="product-item product-item--new">
             <div class="product-item__img-box">
-              <a class="link-focus" href="#">
+              <a class="link-focus" href="#" aria-label="Go to product">
                 <img class="product-item__img" src="images/content/bestsellers/3.jpg" alt="">
               </a>
             </div>
-            <a class="product-item__name-link" href="#">Swirled Drum Coffee
+            <a class="product-item__name-link" href="#" >Swirled Drum Coffee
               Table</a>
             <span class="product-item__price">USD 2283.00</span>
           </li>
           <li class="product-item">
             <div class="product-item__img-box">
-              <a class="link-focus" href="#">
+              <a class="link-focus" href="#"aria-label="Go to product">
                 <img class="product-item__img" src="images/content/bestsellers/4.jpg" alt="">
               </a>
             </div>
@@ -223,9 +228,9 @@
     </section>
     <section class="feedback">
       <div class="container">
-        <ul class="feedback__slider">
+        <ul class="feedback__slider" aria-label="Feedback slider">
           <li class="feedback__slide">
-            <p>
+            <p aria-label="Review">
               Antropologie’s furniture is perfect! It’s prettier than the pictures and I highly recommend it. It’s the
               most
               comfortable furniture I’ve ever had.
@@ -234,7 +239,7 @@
             <div class="feedback__author">Clarissa Heath</div>
           </li>
           <li class="feedback__slide">
-            <p>
+            <p aria-label="Review">
               Antropologie’s furniture is perfect! It’s prettier than the pictures and I highly recommend it. It’s the
               most
               comfortable furniture I’ve ever had.
@@ -243,7 +248,7 @@
             <div class="feedback__author">Clarissa Heath</div>
           </li>
           <li class="feedback__slide">
-            <p>
+            <p aria-label="Review">
               Antropologie’s furniture is perfect! It’s prettier than the pictures and I highly recommend it. It’s the
               most
               comfortable furniture I’ve ever had.
@@ -259,7 +264,7 @@
         <h2 class="title blog-intro__title">Blog</h2>
         <ul class="blog-intro__list">
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#">
+            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
               <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-1-small.jpg" alt="">
             </a>
             <a class="blog-intro__link" href="#">
@@ -276,7 +281,7 @@
             </p>
           </li>
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#">
+            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
               <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-2-small.jpg" alt="">
             </a>
             <a class="blog-intro__link" href="#">
@@ -293,7 +298,7 @@
             </p>
           </li>
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#">
+            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
               <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-3-small.jpg" alt="">
             </a>
             <a class="blog-intro__link" href="#">
