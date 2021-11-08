@@ -32,7 +32,7 @@ body {
   margin: 0 auto;
 }
 
-.title{
+.title {
   @extend %neue-400;
   font-size: 30px;
   letter-spacing: 0.04em;
@@ -47,6 +47,28 @@ body {
   letter-spacing: 0.03em;
 }
 
-.link-box{
+.link-box {
   text-align: center;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+.link-focus {
+  &:focus-visible {
+    outline: none;
+  }
+  &:focus-visible::before {
+    outline: 2px solid $default;
+    outline-offset: -2px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }

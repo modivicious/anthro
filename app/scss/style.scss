@@ -8,33 +8,105 @@
 
 .header {
   padding-top: 20px;
+  z-index: 1200;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 400;
+  transition: all 0.3s;
+  &.header--fixed {
+    position: fixed;
+    top: -100%;
+    background-color: #fff;
+  }
+  &.header--pinned {
+    top: 0;
+  }
+  &.header--white {
+    background-color: #fff;
+  }
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
+  margin: 0 auto;
   position: relative;
   &__btn {
     width: 40px;
     height: 40px;
-    background-image: url("../images/icons/burger-menu.svg");
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 200;
+  }
+  &__btn-open {
+    background-image: url("../images/icons/burger-menu.svg");
+    &.menu__btn-open--hidden {
+      display: none;
+    }
+  }
+  &__btn-close {
+    display: none;
+    background-image: url("../images/icons/cross.svg");
+    &.menu__btn-close--visible {
+      display: block;
+    }
+  }
+  &__overlay {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.18);
+    z-index: 140;
+    transition: 0.25s ease-in;
+    &.menu__overlay--active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 5px;
+    @extend %mont-500;
+    font-size: 17px;
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 180;
+    width: 320px;
+    padding: 38px 23px 0 38px;
+    height: calc(100vh - 57px);
+    background-color: #fff;
+    transform: translateX(-200%);
+    transition: all 0.2s;
+    &.menu__list--active {
+      transform: translateX(0);
+    }
+  }
+  &__list-link {
+    display: block;
+    padding: 10px 0;
   }
   &__logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 200;
   }
-  &__list {
+  &__icons {
     display: flex;
     gap: 13px;
+    z-index: 200;
   }
   &__link {
     display: block;
@@ -83,7 +155,7 @@
   }
   &__descr {
     padding: 22px 0;
-    background-color: #10131b;
+    background-color: $black;
     color: $main-gray;
     p {
       font-size: 15px;
@@ -155,21 +227,6 @@
     letter-spacing: 0.12em;
     padding-bottom: 2px;
     border-bottom: 1px solid $default;
-    &:focus-visible {
-      outline: none;
-    }
-    &:focus-visible::before {
-      outline: 2px solid $default;
-      outline-offset: -2px;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
   }
 }
 
@@ -221,7 +278,7 @@
 //----------- bestsellers -----------
 
 .bestsellers {
-  padding: 70px 0;
+  padding-top: 70px;
   &__title {
     margin-bottom: 24px;
   }
@@ -239,17 +296,21 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   position: relative;
+  &__img-box{
+    position: relative;
+  }
   &__img {
     height: 214px;
     max-width: 100%;
     object-fit: cover;
     margin-bottom: 7px;
   }
-  &__name {
+  &__name-link {
+    display: block;
     margin-bottom: 3px;
   }
   &__price {
-    color: #9c9fa6;
+    color: $gray;
   }
   &__old-price {
     text-decoration: line-through;
@@ -283,6 +344,7 @@
 //----------- feedback -----------
 
 .feedback {
+  padding: 70px 0;
   &__slider {
     .slick-arrow {
       position: absolute;
@@ -331,7 +393,157 @@
 //----------- blog-intro -----------
 
 .blog-intro {
-  padding: 100px 0 70px;
+  padding-top: 31px;
+  background: linear-gradient(to bottom, $main-gray 75%, #fff 75%);
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  &__item {
+    p {
+      @extend %mont-500;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    height: 152px;
+    width: 100%;
+    margin-bottom: 17px;
+  }
+  &__name {
+    @extend %mont-700;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  &__date {
+    color: $gray;
+    @extend %mont-500;
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+}
+
+//----------- subscribe -----------
+
+.subscribe {
+  padding: 70px 0;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @extend %mont-500;
+    p {
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+  &__input {
+    font-size: 14px;
+    background-color: $main-gray;
+    border: none;
+    padding: 15px 17px;
+    margin-bottom: 14px;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  &__btn {
+    width: 100%;
+    background-color: $default;
+    color: $main-gray;
+    padding: 15px 0 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+}
+
+//----------- footer -----------
+
+.footer {
+  background-color: $black;
+  color: $main-gray;
+  padding: 38px 0 15px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__nav-box {
+    width: 100%;
+    border-bottom: 1px solid $main-gray;
+    margin-bottom: 19px;
+  }
+  &__title {
+    @extend %mont-500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 4px 4px 8px 7px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 4px;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/icons/plus.svg");
+    }
+  }
+  &__nav {
+    display: none;
+    padding: 10px 0 18px 7px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__locator-link-box {
+    padding-left: 29px;
+    position: relative;
+    min-height: 24px;
+    margin-top: 55px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/location.svg");
+    }
+  }
+  &__locator-link {
+    display: block;
+    @extend %mont-500;
+    font-size: 13px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $main-gray;
+  }
+  .socials {
+    margin-top: 82px;
+  }
+  &__copy {
+    margin-top: -19px;
+    font-size: 8px;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  &__link {
+    display: block;
+  }
 }
 
 @import "media";
