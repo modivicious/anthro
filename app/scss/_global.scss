@@ -41,6 +41,7 @@ body {
 
 .link {
   @extend %mont-700;
+  font-size: 15px;
   text-transform: uppercase;
   border-bottom: 2px solid $default;
   color: $default;
