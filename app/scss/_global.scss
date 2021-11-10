@@ -32,6 +32,12 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  svg {
+    display: block;
+  }
+}
+
 .title {
   @extend %neue-400;
   font-size: 30px;
@@ -72,4 +78,8 @@ body {
     bottom: 0;
     left: 0;
   }
+}
+
+summary::marker {
+  content: none;
 }

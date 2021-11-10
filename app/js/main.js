@@ -1,4 +1,6 @@
 $(function () {
+  const screenWidth = window.screen.width;
+
   $(".feedback__slider").slick({
     prevArrow:
       '<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style=""><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.26378 12.8122L11.4983 23.0433C11.9474 23.4912 12.6749 23.4912 13.1252 23.0433C13.5742 22.5953 13.5742 21.8677 13.1252 21.4198L3.70246 12.0005L13.124 2.58118C13.5731 2.13324 13.5731 1.40565 13.124 0.956567C12.6749 0.508618 11.9462 0.508618 11.4971 0.956567L1.26265 11.1876C0.820465 11.6309 0.820465 12.3699 1.26378 12.8122Z" fill="#2A364E"/></svg></button>',
@@ -7,7 +9,10 @@ $(function () {
   });
 
   $(".footer__title").on("click", function () {
-    $(this).next().slideToggle();
+    if (screenWidth < 768) {
+      $(this).toggleClass("footer__title--open");
+      $(this).next().slideToggle();
+    }
   });
 
   function toggleMenu() {
@@ -21,8 +26,6 @@ $(function () {
 
   $(".menu__btn").on("click", () => toggleMenu());
   $(".menu__overlay").on("click", () => toggleMenu());
-
-  const screenWidth = window.screen.width;
 
   if (screenWidth < 768) {
     var lastScroll = 0;

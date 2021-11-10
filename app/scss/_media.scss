@@ -5,9 +5,15 @@
   .container {
     max-width: 480px;
   }
+  .title {
+    font-size: 45px;
+  }
   .intro {
     &__descr {
       padding: 43px 28px 48px 24px;
+    }
+    &__inner {
+      max-width: 428px;
     }
     &__title {
       font-size: 40px;
@@ -15,19 +21,21 @@
   }
   .offers {
     padding: 80px 0;
+    &__inner p {
+      font-size: 20px;
+    }
     &__categories {
       margin-top: 80px;
     }
     &__name {
       font-size: 25px;
-      margin-bottom: 8px;
     }
     &__box {
       padding: 28px 24px;
     }
   }
   .benefits {
-    padding: 68px 92px 87px 97px;
+    padding: 68px 77px 87px 82px;
     &__name {
       font-size: 23px;
     }
@@ -63,7 +71,7 @@
   }
   .blog-intro {
     padding-top: 41px;
-    background: linear-gradient(to bottom, #ecebeb 75%, #fff 75%);
+    background: linear-gradient(to bottom, #ecebeb 81%, #fff 81%);
     &__title {
       margin-bottom: 27px;
     }
@@ -95,6 +103,304 @@
       &::before {
         right: 13px;
       }
+    }
+    &__item {
+      padding-left: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 25px;
+  }
+  .menu {
+    &__btn {
+      display: none;
+    }
+    &__logo {
+      position: unset;
+      transform: unset;
+      path {
+        fill: $main-gray;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      overflow-y: unset;
+      gap: 30px;
+      font-size: 15px;
+      text-transform: capitalize;
+      position: absolute;
+      bottom: unset;
+      left: 50%;
+      transform: translateX(-50%);
+      right: unset;
+      width: auto;
+      padding: unset;
+      height: auto;
+      background-color: unset;
+    }
+  }
+  .intro {
+    flex-direction: row-reverse;
+    &__bg {
+      height: 100vh;
+      width: 100%;
+    }
+    &__descr {
+      padding: 0 25px 64px 25px;
+      display: flex;
+      align-items: flex-end;
+    }
+    &__inner {
+      max-width: 228px;
+      p {
+        margin-bottom: 17px;
+      }
+    }
+  }
+  .offers {
+    padding: 100px 0 110px;
+    &__inner p {
+      font-size: 25px;
+    }
+    &__categories {
+      margin-top: 100px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 211px 276px;
+      gap: 25px 16px;
+    }
+    &__box {
+      padding: 28px 30px;
+    }
+    &__category {
+      &:nth-child(2n) {
+        order: 1;
+      }
+      &:nth-child(1) {
+        grid-column: 1 / 5;
+      }
+      &:nth-child(3) {
+        grid-column: 5 / 7;
+      }
+      &:nth-child(2) {
+        grid-column: 1 / 4;
+      }
+      &:nth-child(4) {
+        grid-column: 4 / 7;
+      }
+    }
+  }
+  .benefits {
+    padding: 62px 0;
+    &__name {
+      font-size: 23px;
+    }
+    &__list {
+      flex-direction: row;
+      gap: 18px;
+    }
+    &__item {
+      width: 33%;
+    }
+  }
+  .bestsellers {
+    padding-top: 110px;
+    &__list {
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+      gap: 23px;
+      overflow-x: auto;
+      grid-auto-flow: column;
+      grid-auto-columns: 223px;
+    }
+    &__title {
+      margin-bottom: 55px;
+    }
+  }
+  .product-item {
+    &__img {
+      height: 331px;
+      margin-bottom: 13px;
+    }
+    &__name-link {
+      margin-bottom: 5px;
+    }
+  }
+  .feedback {
+    padding: 110px 0;
+    &__slide {
+      background-size: 212px 201px;
+      p {
+        font-size: 25px;
+        max-width: 534px;
+        margin: 52px auto 45px;
+      }
+    }
+  }
+  .blog-intro {
+    padding-top: 34px;
+    background: linear-gradient(to bottom, #ecebeb 54%, #fff 54%);
+    &__title {
+      margin-bottom: 46px;
+    }
+    &__img {
+      height: 221px;
+      margin-bottom: 17px;
+    }
+    &__item p {
+      font-size: 15px;
+    }
+    &__list {
+      overflow-x: auto;
+      grid-auto-flow: column;
+      grid-auto-columns: 303px;
+    }
+  }
+  .subscribe {
+    padding: 110px 0;
+    max-width: 750px;
+    margin: 0 auto;
+    &__form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      p {
+        font-size: 25px;
+        margin-bottom: 26px;
+      }
+    }
+    &__box {
+      display: flex;
+    }
+    &__input {
+      margin-bottom: unset;
+    }
+    &__btn {
+      padding: 15px 55px;
+      width: unset;
+    }
+  }
+  .footer {
+    padding: 55px 0 30px;
+    &__inner {
+      gap: 34px 46px;
+    }
+    &__brand {
+      display: block;
+    }
+    &__nav-box {
+      width: unset;
+      border-bottom: unset;
+      margin-bottom: unset;
+    }
+    &__nav {
+      display: block;
+      padding: unset;
+    }
+    &__title {
+      padding: 0;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      &::before {
+        content: unset;
+      }
+    }
+    &__item {
+      padding-left: 0;
+    }
+    &__box {
+      justify-content: flex-end;
+    }
+    &__locator-link {
+      margin-top: unset;
+      margin-right: 80px;
+    }
+    .socials {
+      margin-top: unset;
+    }
+    &__copy {
+      margin-top: -23px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+  .intro {
+    &__descr {
+      padding-bottom: 75px;
+    }
+    &__inner {
+      max-width: 420px;
+    }
+  }
+  .offers {
+    &__inner p {
+      max-width: 743px;
+      font-size: 25px;
+      margin: 0 auto 23px;
+    }
+    &__categories {
+      grid-template-columns: repeat(12, 1fr);
+      gap: 25px;
+    }
+    &__category {
+      &:nth-child(1) {
+        grid-column: 1 / 8;
+      }
+      &:nth-child(3) {
+        grid-column: 8 / 13;
+      }
+      &:nth-child(2) {
+        grid-column: 1 / 6;
+      }
+      &:nth-child(4) {
+        grid-column: 6 / 13;
+      }
+    }
+  }
+  .benefits {
+    &__list {
+      gap: 67px;
+    }
+  }
+  .bestsellers {
+    &__list {
+      gap: 19px;
+    }
+  }
+  .feedback {
+    &__slide p {
+      max-width: 691px;
+      margin-bottom: 88px;
+    }
+  }
+  .blog-intro {
+    &__list {
+      gap: 20px;
+    }
+    &__name {
+      max-width: 255px;
+    }
+  }
+  .footer {
+    &__inner{
+      margin-bottom: 38px;
+    }
+    &__box {
+      display: block;
+      width: unset;
+    }
+    &__locator-link {
+      margin: 0 0 17px 0;
+    }
+    &__copy{
+      margin-top: unset;
     }
   }
 }
