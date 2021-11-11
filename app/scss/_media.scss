@@ -57,6 +57,10 @@
     &__img {
       height: 321px;
     }
+    &::before {
+      top: 16px;
+      left: 18px;
+    }
   }
   .feedback {
     padding: 80px 0;
@@ -240,6 +244,10 @@
         margin: 52px auto 45px;
       }
     }
+    &__avatar {
+      width: 98px;
+      height: 98px;
+    }
   }
   .blog-intro {
     padding-top: 34px;
@@ -330,6 +338,7 @@
 @media (min-width: 1000px) {
   .container {
     max-width: 1000px;
+    padding: 0 20px;
   }
   .intro {
     &__descr {
@@ -371,7 +380,9 @@
   }
   .bestsellers {
     &__list {
-      gap: 19px;
+      gap: 22px;
+      overflow-x: hidden;
+      justify-content: center;
     }
   }
   .feedback {
@@ -382,14 +393,16 @@
   }
   .blog-intro {
     &__list {
-      gap: 20px;
+      gap: 25px;
+      overflow-x: hidden;
+      justify-content: center;
     }
     &__name {
       max-width: 255px;
     }
   }
   .footer {
-    &__inner{
+    &__inner {
       margin-bottom: 38px;
     }
     &__box {
@@ -399,8 +412,69 @@
     &__locator-link {
       margin: 0 0 17px 0;
     }
-    &__copy{
+    &__copy {
       margin-top: unset;
     }
+  }
+}
+
+@media (min-width: 1180px) {
+  .container {
+    max-width: 1180px;
+  }
+  .offers {
+    padding: 143px 0 150px;
+    &__categories {
+      grid-template-rows: 251px 328px;
+      margin-top: 143px;
+    }
+  }
+  .benefits {
+    padding: 66px 0;
+    &__list {
+      gap: 122px;
+    }
+  }
+  .bestsellers {
+    padding-top: 150px;
+    &__list {
+      gap: 30px;
+      grid-auto-columns: 263px;
+    }
+  }
+  .product-item {
+    font-size: 15px;
+    &__img {
+      height: 362px;
+    }
+    &__old-price {
+      margin-left: 14px;
+    }
+  }
+  .feedback {
+    padding: 150px 0;
+    &__slide p {
+      max-width: 805px;
+    }
+  }
+  .blog-intro {
+    padding-top: 49px;
+    &__list {
+      grid-auto-columns: 360px;
+    }
+    &__img {
+      height: 263px;
+    }
+    &__name,
+    &__date,
+    &__item p {
+      font-size: 18px;
+    }
+    &__date {
+      margin-bottom: 19px;
+    }
+  }
+  .subscribe {
+    padding: 150px 0;
   }
 }

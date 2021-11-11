@@ -1,5 +1,5 @@
-@import "vars";
 @import "fonts";
+@import "vars";
 @import "reset";
 @import "libs";
 @import "global";
@@ -87,7 +87,7 @@
     padding: 38px 23px 0 38px;
     height: calc(100vh - 57px);
     background-color: #fff;
-    transform: translateX(-200%);
+    transform: translateX(-100%);
     transition: all 0.2s;
     &.menu__list--active {
       transform: translateX(0);
@@ -140,7 +140,7 @@
   }
 }
 
-//----------- intro -----------
+// ----------- intro -----------
 
 .intro {
   height: 100vh;
