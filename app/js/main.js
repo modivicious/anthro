@@ -27,6 +27,36 @@ $(function () {
   $(".menu__btn").on("click", () => toggleMenu());
   $(".menu__overlay").on("click", () => toggleMenu());
 
+  $(".intro__btn-start").on("click", function () {
+    $(".intro__shop").addClass("intro__shop--active");
+    $(".menu__logo").addClass("logo--dark");
+  });
+
+  $(".intro__btn-back").on("click", function () {
+    $(".intro__nesting-box").removeClass("intro__nesting-box--active");
+    if ($(this).hasClass("return") && screenWidth < 768) {
+      $(this).removeClass("return");
+    } else {
+      $(".intro__link--active").removeClass("intro__link--active");
+      $(".intro__shop").removeClass("intro__shop--active");
+      $(".menu__logo").removeClass("logo--dark");
+    }
+  });
+
+  $(".intro__link").on("click", function (e) {
+    e.preventDefault();
+    $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
+    $(this).next().toggleClass("intro__nesting-box--active");
+    $(".intro__btn-back").toggleClass("return");
+  });
+  
+  $(".intro__link").on("mouseenter", function () {
+    $(".intro__link--active").removeClass("intro__link--active");
+    $(this).addClass("intro__link--active");
+    $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
+    $(this).next().toggleClass("intro__nesting-box--active");
+  });
+
   if (screenWidth < 768) {
     var lastScroll = 0;
     const header = document.querySelector(".header");

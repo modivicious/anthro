@@ -3,6 +3,29 @@ body {
   height: 100%;
 }
 
+// Firefox
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $default #fff;
+}
+
+// Other Browsers
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $default;
+  &:horizontal {
+    border-radius: 4px;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -78,5 +101,11 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+  }
+}
+
+.logo--dark {
+  svg path {
+    fill: $default;
   }
 }
