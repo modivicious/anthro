@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> | Anthro</title>
+  <meta name="description" content="Furniture online shop">
+  <link rel="icon" href="images/favicon/favicon.svg">
+  <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu">
+      <button class="menu__btn menu__btn-open" type="button" aria-label="Open navigation menu">
+      </button>
+
+      <button class="menu__btn menu__btn-close" type="button" aria-label="Close navigation menu">
+      </button>
+
+      <div class="menu__overlay" role="button" aria-hidden="true"></div>
+
+      <a class="menu__logo logo--dark" href="#" aria-label='Anthro logo, return to home page'>
+        <svg width="62" height="23" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.36 11a2.23 2.23 0 0 0-1.7.04c-.4.18-.7.45-.93.8a2.11 2.11 0 0 0 .36 2.65 2.42 2.42 0 0 0 1.4.63c.52 0 1-.21 1.45-.63.47-.44.7-.96.7-1.56A2.12 2.12 0 0 0 10.36 11ZM8.93 9.24a3.89 3.89 0 0 1 2.31.36c.28.15.43.22.46.22.03 0 .04-.1.04-.33v-.32h1.6v7.54h-1.6v-.65l-.46.23a3.9 3.9 0 0 1-3.57-.02 3.77 3.77 0 0 1 1.22-7.03ZM15.16 16.63V9.09h1.68v.52c0 .35.03.53.1.53.03 0 .07-.03.1-.09.06-.08.29-.2.68-.37.4-.19.72-.31.99-.38.28-.07.63-.1 1.07-.1.45 0 .79.03 1.03.1a4.51 4.51 0 0 1 3.4 3.57c.05.36.08 1.03.08 2.01v1.75h-1.6v-1.47c0-.84-.02-1.44-.08-1.79a2.83 2.83 0 0 0-1.39-2.12 2.87 2.87 0 0 0-1.93-.4c-.99.21-1.71.77-2.16 1.68l-.25.53c0 .4 0 1-.02 1.8-.02.79-.02 1.38-.02 1.77h-1.68ZM27.27 8.37V6.36h1.6v2.01h1.11v1.6h-1.11v6.66h-1.6V9.97h-1.05v-1.6h1.05ZM31.85 16.71V6.44h1.6V8.3c0 1.23.01 1.85.04 1.85s.2-.1.5-.27a4.51 4.51 0 0 1 6.62 2.47c.1.27.16 1.07.19 2.42l.04 1.95h-1.6l-.04-1.78a8.84 8.84 0 0 0-.21-2.25 2.75 2.75 0 0 0-1.07-1.32 2.75 2.75 0 0 0-2.06-.49 2.87 2.87 0 0 0-2.35 2.33c-.01.21-.03.76-.04 1.64l-.02 1.87h-1.6ZM42.7 16.63V9h1.6v1.05l.24-.14a5.04 5.04 0 0 1 2.28-.86L47.3 9v.8c0 .38-.02.61-.05.7 0 .07-.06.11-.14.14-.63.14-1.1.32-1.43.53-.32.24-.57.47-.74.69a2.4 2.4 0 0 0-.48.97c-.05.29-.1.95-.12 1.97l-.03 1.83h-1.6ZM53.8 10.98a2.01 2.01 0 0 0-2.33.44c-.42.4-.63.89-.63 1.45 0 .22.04.46.12.71.37.94 1.02 1.4 1.96 1.4a2.1 2.1 0 0 0 1.45-.52c.39-.36.61-.83.67-1.4v-.17c0-.9-.42-1.53-1.24-1.91ZM52.12 9.2a3.61 3.61 0 0 1 2.5.32c.66.3 1.17.77 1.53 1.39.38.6.57 1.25.57 1.95 0 1.02-.35 1.89-1.05 2.6a3.55 3.55 0 0 1-2.71 1.18 3.64 3.64 0 0 1-2.67-1.11 3.65 3.65 0 0 1-1.09-2.7c0-.87.27-1.65.82-2.32a3.56 3.56 0 0 1 2.1-1.3Z"
+            fill="#2A364E" />
+        </svg>
+      </a>
+
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__list-link" href="#">
+            Catalog
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__list-link" href="#">
+            Blog
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__list-link" href="#">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <ul class="menu__icons">
+        <li class="menu__icon">
+          <a class="menu__link menu__link--search" href="#">
+            <span class="visually-hidden">Search</span>
+          </a>
+        </li>
+        <li class="menu__icon">
+          <a class="menu__link menu__link--cart" href="#">
+            <span class="visually-hidden">Cart</span>
+          </a>
+        </li>
+        <li class="menu__icon">
+          <a class="menu__link menu__link--heart" href="#">
+            <span class="visually-hidden">Saved Items</span>
+            <span class="menu__count" aria-label="Count of saved items">7</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#" aria-label='Anthro logo, return to home page'>
+            <svg width="62" height="23" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.36 11a2.23 2.23 0 0 0-1.7.04c-.4.18-.7.45-.93.8a2.11 2.11 0 0 0 .36 2.65 2.42 2.42 0 0 0 1.4.63c.52 0 1-.21 1.45-.63.47-.44.7-.96.7-1.56A2.12 2.12 0 0 0 10.36 11ZM8.93 9.24a3.89 3.89 0 0 1 2.31.36c.28.15.43.22.46.22.03 0 .04-.1.04-.33v-.32h1.6v7.54h-1.6v-.65l-.46.23a3.9 3.9 0 0 1-3.57-.02 3.77 3.77 0 0 1 1.22-7.03ZM15.16 16.63V9.09h1.68v.52c0 .35.03.53.1.53.03 0 .07-.03.1-.09.06-.08.29-.2.68-.37.4-.19.72-.31.99-.38.28-.07.63-.1 1.07-.1.45 0 .79.03 1.03.1a4.51 4.51 0 0 1 3.4 3.57c.05.36.08 1.03.08 2.01v1.75h-1.6v-1.47c0-.84-.02-1.44-.08-1.79a2.83 2.83 0 0 0-1.39-2.12 2.87 2.87 0 0 0-1.93-.4c-.99.21-1.71.77-2.16 1.68l-.25.53c0 .4 0 1-.02 1.8-.02.79-.02 1.38-.02 1.77h-1.68ZM27.27 8.37V6.36h1.6v2.01h1.11v1.6h-1.11v6.66h-1.6V9.97h-1.05v-1.6h1.05ZM31.85 16.71V6.44h1.6V8.3c0 1.23.01 1.85.04 1.85s.2-.1.5-.27a4.51 4.51 0 0 1 6.62 2.47c.1.27.16 1.07.19 2.42l.04 1.95h-1.6l-.04-1.78a8.84 8.84 0 0 0-.21-2.25 2.75 2.75 0 0 0-1.07-1.32 2.75 2.75 0 0 0-2.06-.49 2.87 2.87 0 0 0-2.35 2.33c-.01.21-.03.76-.04 1.64l-.02 1.87h-1.6ZM42.7 16.63V9h1.6v1.05l.24-.14a5.04 5.04 0 0 1 2.28-.86L47.3 9v.8c0 .38-.02.61-.05.7 0 .07-.06.11-.14.14-.63.14-1.1.32-1.43.53-.32.24-.57.47-.74.69a2.4 2.4 0 0 0-.48.97c-.05.29-.1.95-.12 1.97l-.03 1.83h-1.6ZM53.8 10.98a2.01 2.01 0 0 0-2.33.44c-.42.4-.63.89-.63 1.45 0 .22.04.46.12.71.37.94 1.02 1.4 1.96 1.4a2.1 2.1 0 0 0 1.45-.52c.39-.36.61-.83.67-1.4v-.17c0-.9-.42-1.53-1.24-1.91ZM52.12 9.2a3.61 3.61 0 0 1 2.5.32c.66.3 1.17.77 1.53 1.39.38.6.57 1.25.57 1.95 0 1.02-.35 1.89-1.05 2.6a3.55 3.55 0 0 1-2.71 1.18 3.64 3.64 0 0 1-2.67-1.11 3.65 3.65 0 0 1-1.09-2.7c0-.87.27-1.65.82-2.32a3.56 3.56 0 0 1 2.1-1.3Z"
+                fill="#2A364E" />
+            </svg>
+          </a>
+          <p>
+            Stylish designs to&nbsp;discover daily
+          </p>
+          <div class="footer__pay" aria-label="Payment systems">
+            <img src="images/icons/visa.svg" alt="Visa">
+            <img src="images/icons/paypal.svg" alt="PayPal">
+            <img src="images/icons/master-card.svg" alt="Master Card">
+          </div>
+        </div>
+
+        <div class="footer__nav-box">
+          <h3 role="button" class="footer__title" aria-label="Open the list">
+            help
+          </h3>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Returns & Exchanges
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Shipping
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Customer Service
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-box">
+          <h3 role="button" class="footer__title" aria-label="Open the list">
+            About Us
+          </h3>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Catalog
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Blog
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                About
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Diversity & Inclusion
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-box">
+          <h3 role="button" class="footer__title" aria-label="Open the list">
+            Connect
+          </h3>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Contact Us
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Careers
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Styling Services
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <a class="footer__locator-link" href="#" target="_blank">
+            Store Locator
+          </a>
+
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.6479 20C12.5983 20 12.5486 20 12.4986 19.9998C11.3228 20.0026 10.2363 19.9728 9.17977 19.9084C8.21111 19.8495 7.3269 19.5148 6.62261 18.9405C5.94303 18.3864 5.47895 17.6371 5.24331 16.7138C5.03822 15.91 5.02735 15.1209 5.01694 14.3577C5.00938 13.8101 5.0016 13.1612 5 12.5014C5.0016 11.8387 5.00938 11.1899 5.01694 10.6423C5.02735 9.87916 5.03822 9.09009 5.24331 8.28614C5.47895 7.36283 5.94303 6.61358 6.62261 6.05945C7.3269 5.48519 8.21111 5.15045 9.17988 5.09151C10.2364 5.02731 11.3231 4.99733 12.5014 5.00019C13.6776 4.99767 14.7637 5.02731 15.8202 5.09151C16.7889 5.15045 17.6731 5.48519 18.3774 6.05945C19.0571 6.61358 19.521 7.36283 19.7567 8.28614C19.9618 9.08997 19.9726 9.87916 19.9831 10.6423C19.9906 11.1899 19.9985 11.8387 20 12.4986V12.5014C19.9985 13.1612 19.9906 13.8101 19.9831 14.3577C19.9726 15.1208 19.9619 15.9099 19.7567 16.7138C19.521 17.6371 19.0571 18.3864 18.3774 18.9405C17.6731 19.5148 16.7889 19.8495 15.8202 19.9084C14.8084 19.97 13.769 20 12.6479 20ZM12.4986 18.8279C13.6553 18.8306 14.7173 18.8015 15.749 18.7387C16.4815 18.6942 17.1166 18.4565 17.6368 18.0323C18.1177 17.6401 18.4489 17.099 18.6212 16.4241C18.7919 15.7549 18.8018 15.0365 18.8113 14.3417C18.8187 13.7977 18.8265 13.1534 18.8281 12.5C18.8265 11.8464 18.8187 11.2022 18.8113 10.6583C18.8018 9.9635 18.7919 9.24504 18.6212 8.57579C18.4489 7.90081 18.1177 7.35974 17.6368 6.96755C17.1166 6.54343 16.4815 6.30573 15.749 6.26121C14.7173 6.19839 13.6553 6.16943 12.5013 6.17195C11.3448 6.1692 10.2827 6.19839 9.25096 6.26121C8.51851 6.30573 7.88345 6.54343 7.36318 6.96755C6.88228 7.35974 6.55108 7.90081 6.37884 8.57579C6.20808 9.24504 6.19824 9.96339 6.18874 10.6583C6.1813 11.2027 6.17352 11.8473 6.17192 12.5014C6.17352 13.1525 6.1813 13.7973 6.18874 14.3417C6.19824 15.0365 6.20808 15.7549 6.37884 16.4241C6.55108 17.099 6.88228 17.6401 7.36318 18.0323C7.88345 18.4564 8.51851 18.6941 9.25096 18.7386C10.2827 18.8015 11.3451 18.8308 12.4986 18.8279ZM12.4706 16.1621C10.4514 16.1621 8.8084 14.5193 8.8084 12.5C8.8084 10.4807 10.4514 8.83786 12.4706 8.83786C14.49 8.83786 16.1329 10.4807 16.1329 12.5C16.1329 14.5193 14.49 16.1621 12.4706 16.1621ZM12.4706 10.0097C11.0975 10.0097 9.98032 11.1269 9.98032 12.5C9.98032 13.873 11.0975 14.9902 12.4706 14.9902C13.8439 14.9902 14.961 13.873 14.961 12.5C14.961 11.1269 13.8439 10.0097 12.4706 10.0097ZM16.5431 7.66598C16.0577 7.66598 15.6641 8.05943 15.6641 8.54489C15.6641 9.03035 16.0577 9.4238 16.5431 9.4238C17.0285 9.4238 17.422 9.03035 17.422 8.54489C17.422 8.05943 17.0285 7.66598 16.5431 7.66598Z"
+                    fill="#ECEBEB" />
+                </svg>
+                <span class="visually-hidden">
+                  Instagram
+                </span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.03617 13.2951C8.05758 13.2417 8.27174 12.4187 8.28674 12.363C7.95239 11.8599 7.58097 10.2124 7.86586 8.87514C8.1732 6.913 10.2525 5.94844 12.2157 5.94844V5.94478C14.6737 5.94635 16.5135 7.31391 16.5155 9.66913C16.517 11.5126 15.4064 13.9494 13.5101 13.9494C13.5095 13.9494 13.5092 13.9494 13.5086 13.9494C12.8318 13.9494 11.9749 13.6425 11.7502 13.341C11.4909 12.9936 11.4272 12.5649 11.5642 12.1068C11.9 11.035 12.3282 9.75109 12.3782 8.89498C12.4245 8.08702 11.8512 7.56135 11.1077 7.56135C10.5483 7.56135 9.82161 7.8863 9.45946 8.79945C9.16034 9.55807 9.16674 10.3523 9.47904 11.2274C9.6008 11.5694 8.93927 13.7993 8.72733 14.5255C8.20074 16.3293 7.47983 18.6116 7.63396 19.8826L7.78273 21.1055L8.53 20.1262C9.56412 18.7725 10.6334 15.2708 10.9182 14.4187C11.7605 15.5095 13.5145 15.5408 13.719 15.5408C16.2308 15.5408 19.0791 13.0466 18.9983 9.57517C18.9275 6.53088 16.6995 4 12.6962 4V4.00392C8.88837 4.00392 6.66587 6.0364 6.1218 8.60447C5.62353 10.9857 6.73165 12.798 8.03617 13.2951Z"
+                    fill="#ECEBEB" />
+                </svg>
+                <span class="visually-hidden">
+                  Pinterest
+                </span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.125 5H6.875C5.84094 5 5 5.84094 5 6.875V18.125C5 19.1591 5.84094 20 6.875 20H12.5V14.8438H10.625V12.5H12.5V10.625C12.5 9.07156 13.7591 7.8125 15.3125 7.8125H17.1875V10.1562H16.25C15.7325 10.1562 15.3125 10.1075 15.3125 10.625V12.5H17.6562L16.7188 14.8438H15.3125V20H18.125C19.1591 20 20 19.1591 20 18.125V6.875C20 5.84094 19.1591 5 18.125 5Z"
+                    fill="#ECEBEB" />
+                </svg>
+                <span class="visually-hidden">
+                  Facebook
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="footer__copy">
+        2020 URBN.com. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
