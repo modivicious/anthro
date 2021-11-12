@@ -39,6 +39,10 @@ body {
 
 .main {
   flex-grow: 1;
+  padding-top: 60px;
+  &--home{
+    padding-top: 0;
+  }
 }
 
 .visually-hidden {

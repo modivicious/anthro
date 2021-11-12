@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> | Anthro</title>
-  <meta name="description" content="Furniture online shop">
+  <title> Blog | Anthro</title>
+  <meta name="description" content="Blog">
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,7 +23,7 @@
       <button class="menu__btn menu__btn-close" type="button" aria-label="Close navigation menu">
       </button>
 
-      <div class="menu__overlay" aria-hidden="true"></div>
+      <div class="menu__overlay" role="button" aria-hidden="true"></div>
 
       <a class="menu__logo logo--dark" href="#" aria-label='Anthro logo, return to home page'>
         <svg width="62" height="23" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__list-link" href="#">
+          <a class="menu__list-link menu__list-link--active" href="#">
             Blog
           </a>
         </li>
@@ -72,7 +72,131 @@
   </header>
 
   <main class="main">
-
+    <h1 class="visually-hidden">Blog</h1>
+    <section class="blog">
+      <div class="blog__categories">
+        <div class="container">
+          <ul class="blog__filter">
+            <li class="blog__filter-item">
+              <button class="blog__btn" type="button" data-filter='all'>ALL</button>
+            </li>
+            <li class="blog__filter-item">
+              <button class="blog__btn" type="button" data-filter='.inspiration'>INSPIRATION</button>
+            </li>
+            <li class="blog__filter-item">
+              <button class="blog__btn" type="button" data-filter='.decorating'>DECORATING</button>
+            </li>
+            <li class="blog__filter-item">
+              <button class="blog__btn" type="button" data-filter='.diy'>DIY</button>
+            </li>
+            <li class="blog__filter-item">
+              <button class="blog__btn" type="button" data-filter='.inside'>INSIDE LOOK</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="blog__list">
+          <li class="blog__article mix decorating">
+            <a class="blog__link" href="#" aria-label="Read article">
+              <picture>
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-1-wide.webp" type="image/webp">
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-1-wide.jpg">
+                <source srcset="images/content/blog/blog-1-thumb.webp" type="image/webp">
+                <img class="blog__img" src="images/content/blog/blog-1-thumb.jpg" alt="">
+              </picture>
+            </a>
+            <div class="blog__category">
+              decorating
+            </div>
+            <a class="blog__link" href="#">
+              <h2 class="blog__title">
+                Which Sofa Style is Best for You?
+              </h2>
+            </a>
+            <p>
+              We can all tell the difference between enduring traditional and sleek contemporary furniture styles. But
+              are
+              you really
+              clear about terms like mid-century modern and urban farmhouse?
+            </p>
+            <a class="link blog__read-link" href="#">read</a>
+          </li>
+          <li class="blog__article mix inspiration">
+            <a class="blog__link" href="#" aria-label="Read article">
+              <picture>
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-2-wide.webp" type="image/webp">
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-2-wide.jpg">
+                <source srcset="images/content/blog/blog-2-thumb.webp" type="image/webp">
+                <img class="blog__img" src="images/content/blog/blog-2-thumb.jpg" alt="">
+              </picture>
+            </a>
+            <div class="blog__category">
+              inspiration
+            </div>
+            <a class="blog__link" href="#">
+              <h2 class="blog__title">
+                Which Sofa Style is Best for You?
+              </h2>
+            </a>
+            <p>
+              There is no shortage of sofa styles, and which design you select for your home will reflect your
+              personality.
+            </p>
+            <a class="link blog__read-link" href="#">read</a>
+          </li>
+          <li class="blog__article mix decorating">
+            <a class="blog__link" href="#" aria-label="Read article">
+              <picture>
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-3-wide.webp" type="image/webp">
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-3-wide.jpg">
+                <source srcset="images/content/blog/blog-3-thumb.webp" type="image/webp">
+                <img class="blog__img" src="images/content/blog/blog-3-thumb.jpg" alt="">
+              </picture>
+            </a>
+            <div class="blog__category">
+              decorating
+            </div>
+            <a class="blog__link" href="#">
+              <h2 class="blog__title">
+                2021 Home Furniture Trends
+              </h2>
+            </a>
+            <p>
+              When searching the Internet
+              for home design trends, there
+              are hundreds that come up 
+              from dozens of different publications.
+            </p>
+            <a class="link blog__read-link" href="#">read</a>
+          </li>
+          <li class="blog__article mix diy">
+            <a class="blog__link" href="#" aria-label="Read article">
+              <picture>
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-4-wide.webp" type="image/webp">
+                <source media="(min-width: 480px)" srcset="images/content/blog/blog-4-wide.jpg">
+                <source srcset="images/content/blog/blog-4-thumb.webp" type="image/webp">
+                <img class="blog__img" src="images/content/blog/blog-4-thumb.jpg" alt="">
+              </picture>
+            </a>
+            <div class="blog__category">
+              design ideas
+            </div>
+            <a class="blog__link" href="#">
+              <h2 class="blog__title">
+                Ways to Decorate Your Home with the Color Red
+              </h2>
+            </a>
+            <p>
+              The color red is a warm color
+              that can be a powerful accent color. Because it can be overwhelming, it should always be used
+              in moderation.
+            </p>
+            <a class="link blog__read-link" href="#">read</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <aside class="subscribe">

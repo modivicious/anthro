@@ -80,4 +80,6 @@ $(function () {
       lastScroll = scrollPosition();
     });
   }
+
+  mixitup('.blog__list')
 });
