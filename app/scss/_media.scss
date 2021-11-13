@@ -112,9 +112,27 @@
       padding-left: 16px;
     }
   }
+
+  .blog {
+    &__img {
+      height: 400px;
+      margin-bottom: 37px;
+    }
+    &__article {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+    &__filter-list {
+      justify-content: space-between;
+    }
+  }
 }
 
 @media (min-width: 768px) {
+  .menu {
+    max-width: 768px;
+  }
   .container {
     max-width: 768px;
     padding: 0 25px;
@@ -344,7 +362,7 @@
     &__item {
       padding-left: 0;
     }
-    &__link{
+    &__link {
       padding: 3px 0;
     }
     &__box {
@@ -361,9 +379,44 @@
       margin-top: -23px;
     }
   }
+
+  .blog {
+    &__filter {
+      margin-bottom: 40px;
+    }
+    &__img {
+      margin-bottom: 0;
+    }
+    &__content {
+      margin-left: 15px;
+    }
+    &__article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      &:nth-child(even) {
+        .blog__content {
+          grid-row: 1;
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+    &__category {
+      font-size: 13px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+  }
 }
 
 @media (min-width: 1000px) {
+  .menu {
+    max-width: 1000px;
+  }
   .container {
     max-width: 1000px;
     padding: 0 20px;
@@ -450,9 +503,29 @@
       margin-top: unset;
     }
   }
+
+  .blog {
+    &__img {
+      height: 529px;
+    }
+    &__content {
+      margin-left: 27px;
+      gap: 37px;
+    }
+    &__article {
+      &:nth-child(even) {
+        .blog__content {
+          margin: 0 27px 0 0;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1180px) {
+  .menu {
+    max-width: 1180px;
+  }
   .container {
     max-width: 1180px;
   }
@@ -510,5 +583,21 @@
   }
   .subscribe {
     padding: 150px 0;
+  }
+
+  .blog {
+    &__img {
+      height: 621px;
+    }
+    &__content {
+      margin-left: 30px;
+    }
+    &__article {
+      &:nth-child(even) {
+        .blog__content {
+          margin: 0 30px 0 0;
+        }
+      }
+    }
   }
 }
