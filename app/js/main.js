@@ -7,6 +7,23 @@ $(function () {
     nextArrow:
       '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.7362 12.8122L2.50173 23.0433C2.05265 23.4912 1.32506 23.4912 0.874844 23.0433C0.425761 22.5953 0.425761 21.8677 0.874844 21.4198L10.2975 12.0005L0.875978 2.58118C0.426896 2.13324 0.426896 1.40565 0.875978 0.956567C1.32506 0.508618 2.05378 0.508618 2.50286 0.956567L12.7374 11.1876C13.1795 11.6309 13.1795 12.3699 12.7362 12.8122Z" fill="#2A364E"/></svg></button>',
   });
+  $(".product__photos").slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+  });
+
+  $(".product__rating").rateYo({
+    starWidth: "15px",
+    spacing: "8px",
+    readOnly: true,
+    starSvg:
+      "<svg width='15' height='14' fill='none'><path d='M14.388 4.874a.386.386 0 0 1 .31.261.375.375 0 0 1-.103.395l-3.11 3.05.746 4.272a.385.385 0 0 1-.548.429l-3.862-2.019-3.851 2.04a.379.379 0 0 1-.403-.028.378.378 0 0 1-.153-.374l.723-4.297-3.13-3.034a.379.379 0 0 1-.1-.391.386.386 0 0 1 .31-.261l4.314-.642L7.446.362a.382.382 0 0 1 .687-.003l1.941 3.902 4.314.613Z'/></svg>",
+    normalFill: "#d6d6d6",
+    ratedFill: "#2A364E",
+  });
+
+  $(".product__count, .product__color").styler();
 
   $(".footer__title").on("click", function () {
     if (screenWidth < 768) {
@@ -49,7 +66,7 @@ $(function () {
     $(this).next().toggleClass("intro__nesting-box--active");
     $(".intro__btn-back").toggleClass("return");
   });
-  
+
   $(".intro__link").on("mouseenter", function () {
     $(".intro__link--active").removeClass("intro__link--active");
     $(this).addClass("intro__link--active");
@@ -81,5 +98,5 @@ $(function () {
     });
   }
 
-  mixitup('.blog__list')
+  mixitup(".blog__list");
 });

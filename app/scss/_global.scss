@@ -40,7 +40,7 @@ body {
 .main {
   flex-grow: 1;
   padding-top: 60px;
-  &--home{
+  &--home {
     padding-top: 0;
   }
 }
@@ -111,5 +111,29 @@ body {
 .logo--dark {
   svg path {
     fill: $default;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style-type: none;
+  &__item {
+    padding-right: 10px;
+    position: relative;
+    font-size: 12px;
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+        position: absolute;
+        right: 0;
+      }
+    }
+    &:last-child {
+      .breadcrumbs__link {
+        color: $gray;
+      }
+    }
   }
 }

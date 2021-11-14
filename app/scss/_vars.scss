@@ -30,3 +30,14 @@ $gray: #9c9fa6;
 %luam-700 {
   font-family: "Luam-Bold", sans-serif;
 }
+
+%btn {
+  @extend %mont-500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $main-gray;
+  background-color: $default;
+  padding: 15px 5px 14px;
+  min-width: 200px;
+}
