@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Furniture Online | Anthro</title>
   <meta name="description" content="Furniture online shop">
+  <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin>
   <link rel="preload" href="images/icons/search.svg" as="image">
   <link rel="preload" href="images/icons/cart.svg" as="image">
   <link rel="preload" href="images/icons/heart.svg" as="image">
@@ -550,7 +556,7 @@
     <section class="bestsellers">
       <div class="container">
         <h2 class="title bestsellers__title">Bestsellers</h2>
-        <ul class="bestsellers__list">
+        <ul class="list bestsellers__list">
           <li class="product-item product-item--sale">
             <div class="product-item__img-box">
               <a class="link-focus" href="#" aria-label="Go to product">
@@ -562,7 +568,7 @@
             </div>
             <a class="product-item__name-link" href="#">Desi Outdoor Sconce</a>
             <span class="product-item__price">USD 2283.00</span>
-            <span class="product-item__old-price">USD 3 878.00</span>
+            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
           </li>
           <li class="product-item">
             <div class="product-item__img-box">
@@ -756,9 +762,9 @@
             Stylish designs to&nbsp;discover daily
           </p>
           <div class="footer__pay" aria-label="Payment systems">
-            <img src="images/icons/visa.svg" alt="Visa">
-            <img src="images/icons/paypal.svg" alt="PayPal">
-            <img src="images/icons/master-card.svg" alt="Master Card">
+            <img class="footer__pay-logo--visa" src="images/icons/visa.svg" alt="Visa">
+            <img class="footer__pay-logo--paypal" src="images/icons/paypal.svg" alt="PayPal">
+            <img class="footer__pay-logo--mastercard" src="images/icons/master-card.svg" alt="Master Card">
           </div>
         </div>
 
@@ -880,7 +886,6 @@
             </li>
           </ul>
         </div>
-
 
       </div>
       <div class="footer__copy">

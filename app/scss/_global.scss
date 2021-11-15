@@ -115,15 +115,18 @@ body {
 }
 
 .breadcrumbs {
+  @extend %mont-500;  
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   list-style-type: none;
+  position: relative;
+  z-index: 90;
   &__item {
-    padding-right: 10px;
     position: relative;
     font-size: 12px;
     &:not(:last-child) {
+      padding-right: 10px;
       &::after {
         content: "/";
         position: absolute;
@@ -136,4 +139,10 @@ body {
       }
     }
   }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 15px;
 }

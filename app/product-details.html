@@ -6,7 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Cyrus Chair | Anthro</title>
-  <meta name="description" content="Furniture online shop">
+  <meta name="description" content="Product information">
+  <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin>
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -134,39 +140,255 @@
               </picture>
             </li>
           </ul>
-
           <div class="product__content">
-            <h1 class="product__title">Cyrus Chair</h1>
+            <h1 class="product__name">Cyrus Chair</h1>
             <div class="product__box">
-              <div class="product__rating" data-rateyo-rating="5"></div>
-              <a class="product__link" href="#">2 reviews</a>
+              <div class="product__rating" data-rateyo-rating="5" aria-label="Rating: 5"></div>
+              <a class="product__link" href="#reviews">2 reviews</a>
             </div>
             <p>
-              Boasting clean lines and invitingly soft velvet upholstery, this modern chair is a statement-making piece
-              for a
-              minimalist space.
+              Boasting clean lines and&nbsp;invitingly soft velvet upholstery, this modern
+              chair&nbsp;is&nbsp;a&nbsp;statement-making piece
+              for&nbsp;a&nbsp;minimalist space.
             </p>
-            <a class="product__details-link product__link" href="#">
+            <a class="product__details-link product__link" href="#details">
               view product details
             </a>
-            <div class="product__price">USD 1 486.00</div>
+            <div class="product__price">USD 1&nbsp;486.00</div>
             <form class="product__form" action="#">
-              <input class="product__count" type="number" value="1" min="1" max="99">
-              <select class="product__color">
+              <input class="product__count" type="number" value="1" min="1" max="40" aria-label="Product quatity">
+              <select class="product__color" aria-label="Product color">
                 <option class="product__option product__option--limestone" value="Limestone">Limestone</option>
                 <option class="product__option product__option--ivory" value="Ivory">Ivory</option>
                 <option class="product__option product__option--honey" value="Honey">Honey</option>
               </select>
               <div class="product__form-box">
                 <button class="product__btn" type="submit">add to cart</button>
-                <button class="product__save-btn" type="button"></button>
+                <button class="product__save-btn" type="button">
+                  <span class="visually-hidden">Save this product</span>
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
 
+      <div class="product__details" id="details">
+        <div class="container">
+          <h2 class="product__title">
+            Product details
+          </h2>
+        </div>
+        <div class="product__info-box">
+          <div class="container">
+            <div class="product__info-inner">
+              <h3 class="product__subtitle">Materials</h3>
+              <div class="product__descr">
+                <p>
+                  Cotton velvet upholstery, blackened steel frame and legs, foam and&nbsp;fiber fill cushions.
+                </p>
+                <a class="product__link" href="#">
+                  View care instructions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__info-box">
+          <div class="container">
+            <div class="product__info-inner">
+              <h3 class="product__subtitle">
+                Dimensios
+              </h3>
 
+              <ul class="product__dimensios">
+                <li class="product__dimensios-item">
+                  26.5"H, 28.75"W, 28.5"D
+                </li>
+                <li class="product__dimensios-item">
+                  Seat: 17"H, 20.5"D
+                </li>
+                <li class="product__dimensios-item">
+                  Back: 26.5"H, 17.75"W
+                </li>
+                <li class="product__dimensios-item">
+                  Arms: 21.5"H, 0.75"W
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product__reviews" id="reviews">
+        <div class="container">
+          <h2 class="product__title">
+            Reviews
+          </h2>
+        </div>
+        <article class="product__review review">
+          <div class="container">
+            <div class="product__info-box review__info-box">
+              <div class="review__author">
+                Elisassl
+              </div>
+              <div class="review__box">
+                <div class="review__rating" data-rateyo-rating="4.5" aria-label="Rating: 4.5"></div>
+                <span class="review__date">2 months ago</span>
+              </div>
+              <h2 class="review__title">Very cute!</h2>
+              <p>
+                I ordered the chair and&nbsp;ottoman. They are super cute and&nbsp;fit perfectly in&nbsp;my room. The
+                only downside
+                is&nbsp;the&nbsp;chair is&nbsp;not&nbsp;super comfortable. We’re using it&nbsp;more
+                as&nbsp;an&nbsp;accent, so&nbsp;it’s not a&nbsp;problem.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="product__review review">
+          <div class="container">
+            <div class="product__info-box review__info-box">
+              <div class="review__author">
+                Malcolm
+              </div>
+              <div class="review__box">
+                <div class="review__rating" data-rateyo-rating="5" aria-label="Rating: 5"></div>
+                <span class="review__date">3 months ago</span>
+              </div>
+              <h2 class="review__title">Nice Pieces</h2>
+              <p>
+                We ordered two chairs for a loft space. They come in a&nbsp;bit darker than pictured, which for&nbsp;us
+                is&nbsp;a&nbsp;good thing. The&nbsp;chairs are a&nbsp;bit firmer but still comfortable enough
+                to&nbsp;sit for&nbsp;a&nbsp;while. Happy&nbsp;with&nbsp;our purchase.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="might-like">
+      <div class="container">
+        <h2 class="might-like__title">You might also like</h2>
+        <ul class="list might-like__list">
+
+          <li class="product-item product-item--sale">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/might-like/might-like-1.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/might-like/might-like-1.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Linen Haverhill Chair</a>
+            <span class="product-item__price">USD 1448.00</span>
+            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+          </li>
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/might-like/might-like-2.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/might-like/might-like-2.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Sarrono Accent Chair</a>
+            <span class="product-item__price">USD 1984.00</span>
+          </li>
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/might-like/might-like-3.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/might-like/might-like-3.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Katina Sleeper Chair</a>
+            <span class="product-item__price">USD 980.00</span>
+          </li>
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/might-like/might-like-4.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/might-like/might-like-4.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Sherpa Atticus Armchair</a>
+            <span class="product-item__price">USD 1835.00</span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="recently">
+      <div class="container">
+        <h2 class="recently__title">Recently viewed</h2>
+        <ul class="list recently__list">
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/recently/recently-1.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/recently/recently-1.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Swirled Drum Table</a>
+            <span class="product-item__price">USD 3948.00</span>
+          </li>
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/recently/recently-2.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/recently/recently-2.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Kalmar Canopy Bed</a>
+            <span class="product-item__price">USD 3294.00</span>
+          </li>
+
+          <li class="product-item">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/recently/recently-3.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/recently/recently-3.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Tamboured Double Bathroom Vanity</a>
+            <span class="product-item__price">USD 2998.00</span>
+
+          </li>
+
+          <li class="product-item product-item--sale">
+            <div class="product-item__img-box">
+              <a class="link-focus" href="#" aria-label="Go to product">
+                <picture>
+                  <source srcset="images/content/recently/recently-4.webp" type="image/webp">
+                  <img class="product-item__img" src="images/content/recently/recently-4.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+            <a class="product-item__name-link" href="#">Pied-A-Terre Sofa</a>
+            <span class="product-item__price">USD 2563.00</span>
+            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+          </li>
+
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -200,9 +422,9 @@
             Stylish designs to&nbsp;discover daily
           </p>
           <div class="footer__pay" aria-label="Payment systems">
-            <img src="images/icons/visa.svg" alt="Visa">
-            <img src="images/icons/paypal.svg" alt="PayPal">
-            <img src="images/icons/master-card.svg" alt="Master Card">
+            <img class="footer__pay-logo--visa" src="images/icons/visa.svg" alt="Visa">
+            <img class="footer__pay-logo--paypal" src="images/icons/paypal.svg" alt="PayPal">
+            <img class="footer__pay-logo--mastercard" src="images/icons/master-card.svg" alt="Master Card">
           </div>
         </div>
 
@@ -324,7 +546,6 @@
             </li>
           </ul>
         </div>
-
 
       </div>
       <div class="footer__copy">

@@ -45,17 +45,18 @@
   }
   .bestsellers {
     padding-top: 80px;
-    &__list {
-      gap: 27px 19px;
-    }
     &__title {
       margin-bottom: 27px;
     }
+  }
+  .list {
+    gap: 27px 19px;
   }
   .product-item {
     font-size: 13px;
     &__img {
       height: 321px;
+      width: 215px;
     }
     &::before {
       top: 16px;
@@ -125,6 +126,61 @@
     }
     &__filter-list {
       justify-content: space-between;
+    }
+  }
+
+  .product {
+    &__img {
+      height: 440px;
+    }
+    &__name {
+      font-size: 50px;
+    }
+    &__price {
+      margin-bottom: 30px;
+    }
+    &__content {
+      margin-bottom: 90px;
+    }
+    &__title {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    &__info-box {
+      padding: 30px 0;
+    }
+    &__subtitle {
+      margin-bottom: 0;
+      max-width: 140px;
+      width: 100%;
+    }
+    &__info-inner {
+      display: flex;
+      gap: 20px;
+      p {
+        max-width: 309px;
+      }
+    }
+    &__details {
+      margin-bottom: 50px;
+    }
+    &__reviews {
+      margin-bottom: 50px;
+    }
+  }
+  .might-like__title,
+  .recently__title {
+    font-size: 35px;
+  }
+  .might-like {
+    margin-bottom: 80px;
+  }
+  .breadcrumbs {
+    gap: 7px;
+    &__item {
+      &:not(:last-child) {
+        padding-right: 12px;
+      }
     }
   }
 }
@@ -256,21 +312,23 @@
   }
   .bestsellers {
     padding-top: 110px;
-    &__list {
-      grid-template-columns: unset;
-      grid-template-rows: unset;
-      gap: 23px;
-      overflow-x: auto;
-      grid-auto-flow: column;
-      grid-auto-columns: 223px;
-    }
     &__title {
       margin-bottom: 55px;
     }
   }
+  .list {
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    gap: 23px;
+    overflow-x: auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 223px;
+    padding-bottom: 10px; // for horizontal scroll
+  }
   .product-item {
     &__img {
       height: 331px;
+      width: 221px;
       margin-bottom: 13px;
     }
     &__name-link {
@@ -411,6 +469,116 @@
       font-size: 30px;
     }
   }
+
+  .product {
+    .breadcrumbs {
+      justify-content: flex-end;
+      margin-bottom: -14px;
+    }
+    &__info {
+      display: flex;
+      gap: 27px;
+      margin-bottom: 110px;
+    }
+    &__photos {
+      width: 340px;
+      height: 414px;
+      margin-bottom: 0;
+      .slick-dots {
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        left: -28px;
+        bottom: unset;
+        right: unset;
+        button {
+          background-color: $main-gray;
+        }
+      }
+    }
+    &__img {
+      height: 414px;
+      width: 327px;
+      margin-left: auto;
+    }
+    &__content {
+      margin: 25px 0 0 0;
+    }
+    &__price {
+      margin-bottom: 23px;
+    }
+    &__form-box {
+      gap: 17px;
+    }
+    .jq-selectbox {
+      width: 229px;
+      margin-bottom: 18px;
+    }
+    .jq-number {
+      margin-right: 9px;
+    }
+    &__title {
+      font-size: 35px;
+      margin-bottom: 41px;
+    }
+    &__info-box {
+      padding: 41px 0;
+      p {
+        font-size: 17px;
+      }
+    }
+    &__info-inner {
+      gap: 63px;
+      p {
+        font-size: 17px;
+        max-width: 100%;
+      }
+    }
+    &__subtitle {
+      max-width: 245px;
+      font-size: 30px;
+    }
+    &__dimensios-item {
+      font-size: 17px;
+    }
+    &__details {
+      margin-bottom: 85px;
+    }
+    &__reviews {
+      margin-bottom: 44px;
+    }
+  }
+  .might-like__title,
+  .recently__title {
+    font-size: 45px;
+    margin-bottom: 47px;
+  }
+  .might-like {
+    margin-bottom: 110px;
+  }
+  .review {
+    &__info-box {
+      position: relative;
+      display: grid;
+      grid-template-columns: 215px auto;
+      gap: 15px 30px;
+      p {
+        grid-column: 2;
+      }
+    }
+    &__box {
+      position: absolute;
+      top: 44px;
+      width: 100%;
+    }
+    &__author {
+      grid-row: 2;
+      margin-bottom: 0;
+    }
+    &__title {
+      grid-column: 2;
+      margin-bottom: 0;
+    }
+  }
 }
 
 @media (min-width: 1000px) {
@@ -465,12 +633,11 @@
       gap: 67px;
     }
   }
-  .bestsellers {
-    &__list {
-      gap: 22px;
-      overflow-x: hidden;
-      justify-content: center;
-    }
+  .list {
+    gap: 22px;
+    overflow-x: hidden;
+    justify-content: center;
+    padding-bottom: 0;
   }
   .feedback {
     &__slide p {
@@ -520,6 +687,42 @@
       }
     }
   }
+
+  .product {
+    .breadcrumbs {
+      justify-content: unset;
+      margin-left: 491px;
+    }
+    &__photos {
+      width: 465px;
+      height: 468px;
+    }
+    &__img {
+      height: 468px;
+      width: 449px;
+    }
+    .jq-selectbox {
+      display: block;
+    }
+    .jq-number {
+      margin-bottom: 18px;
+    }
+    &__btn {
+      width: 203px;
+    }
+    &__form-box {
+      gap: 9px;
+    }
+    &__info {
+      margin-bottom: 100px;
+    }
+    &__details {
+      margin-bottom: 59px;
+    }
+    &__reviews {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 @media (min-width: 1180px) {
@@ -544,15 +747,16 @@
   }
   .bestsellers {
     padding-top: 150px;
-    &__list {
-      gap: 30px;
-      grid-auto-columns: 263px;
-    }
+  }
+  .list {
+    gap: 30px;
+    grid-auto-columns: 263px;
   }
   .product-item {
     font-size: 15px;
     &__img {
       height: 362px;
+      width: 263px;
     }
     &__old-price {
       margin-left: 14px;
@@ -598,6 +802,46 @@
           margin: 0 30px 0 0;
         }
       }
+    }
+  }
+
+  .product {
+    .breadcrumbs {
+      margin-left: 588px;
+    }
+    &__photos {
+      width: 557px;
+      height: 567px;
+    }
+    &__img {
+      width: 535px;
+      height: 567px;
+    }
+    &__content {
+      margin-top: 35px;
+      p {
+        max-width: 460px;
+      }
+    }
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__box {
+      margin-bottom: 30px;
+    }
+    &__details-link {
+      margin-bottom: 33px;
+    }
+    &__reviews{
+      margin-bottom: 109px;
+    }
+    &__info-box{
+      p{
+        max-width: 850px;
+      }
+    }
+    .might-like{
+      margin-bottom: 140px;
     }
   }
 }
