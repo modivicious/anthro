@@ -848,32 +848,35 @@
   }
   &__inner {
     display: flex;
-    gap: 12px;
+    gap: 22px;
     position: relative;
   }
   &__img-box {
     position: relative;
   }
   &__img {
+    object-fit: cover;
     width: 138px;
     height: 203px;
   }
   &__info {
     margin-top: 20px;
   }
+  &__descr {
+    margin-bottom: 18px;
+  }
   &__name {
-    @extend %mont-500;
+    // @extend %mont-500;
     font-size: 13px;
     margin-bottom: 5px;
     max-width: 105px;
   }
   &__color-wrapper {
     font-size: 12px;
-    margin-bottom: 18px;
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 15px;
+    line-height: 1;
   }
   &__color {
     display: inline-block;
@@ -898,7 +901,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100px;
+    max-width: 118px;
+    margin-left: -22px;
   }
   &__old-price {
     font-size: 11px;
@@ -935,19 +939,21 @@
   &__shipping {
     @extend %mont-500;
     font-size: 13px;
+    letter-spacing: 0.02em;
     margin-bottom: 7px;
   }
   .jq-selectbox__select {
     padding-left: 16px;
   }
   .jq-selectbox__select-text {
-    padding-left: 102px;
+    padding-left: 106px;
     position: relative;
     &::before {
       content: "Shipping to:";
       position: absolute;
       left: 0;
       color: $gray;
+      letter-spacing: 0;
     }
   }
   .jq-selectbox li {
@@ -959,17 +965,16 @@
     text-transform: uppercase;
     margin-bottom: 23px;
   }
-  &__total-names {
-    font-size: 13px;
-  }
   &__total-names,
   &__total-prices {
     display: grid;
-    gap: 17px;
-  }
-  &__total-price{
-    @extend %neue-400;
+    grid-auto-rows: max-content;
+    gap: 15px;
     font-size: 13px;
+  }
+  &__total-price {
+    @extend %neue-400;
+    letter-spacing: 0.02em;
   }
   &__checkout-btn {
     @extend %btn;

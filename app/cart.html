@@ -7,12 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout | Anthro</title>
   <meta name="description" content="Checkout">
-  <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin>
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -78,6 +75,7 @@
   </header>
 
   <main class="main">
+    <h1 class="visually-hidden">Checkout</h1>
     <section class="cart">
       <div class="container">
         <h2 class="cart__title">
@@ -117,16 +115,18 @@
                   </a>
                 </div>
                 <div class="cart__info">
-                  <a href="#" class="cart__item-link">
-                    <h3 class="cart__name">
-                      Sherpa Atticus Armchair
-                    </h3>
-                  </a>
-                  <div class="cart__color-wrapper">
-                    Color:
-                    <span class="cart__color cart__color--green" title="Green">
-                      <span class="visually-hidden">Green</span>
-                    </span>
+                  <div class="cart__descr">
+                    <a href="#" class="cart__item-link">
+                      <h3 class="cart__name">
+                        Sherpa Atticus Armchair
+                      </h3>
+                    </a>
+                    <div class="cart__color-wrapper">
+                      Color:
+                      <span class="cart__color cart__color--green" title="Green">
+                        <span class="visually-hidden">Green</span>
+                      </span>
+                    </div>
                   </div>
                   <input class="count cart__count" type="number" value="1" min="1" max="40"
                     aria-label="Product quatity">
@@ -155,16 +155,18 @@
                   </a>
                 </div>
                 <div class="cart__info">
-                  <a href="#" class="cart__item-link">
-                    <h3 class="cart__name">
-                      Katina Sleeper Chair
-                    </h3>
-                  </a>
-                  <div class="cart__color-wrapper">
-                    Color:
-                    <span class="cart__color cart__color--bone" title="Bone">
-                      <span class="visually-hidden">Bone</span>
-                    </span>
+                  <div class="cart__descr">
+                    <a href="#" class="cart__item-link">
+                      <h3 class="cart__name">
+                        Katina Sleeper Chair
+                      </h3>
+                    </a>
+                    <div class="cart__color-wrapper">
+                      Color:
+                      <span class="cart__color cart__color--bone" title="Bone">
+                        <span class="visually-hidden">Bone</span>
+                      </span>
+                    </div>
                   </div>
                   <input class="count cart__count" type="number" value="1" min="1" max="40"
                     aria-label="Product quatity">
@@ -192,16 +194,18 @@
                   </a>
                 </div>
                 <div class="cart__info">
-                  <a href="#" class="cart__item-link">
-                    <h3 class="cart__name">
-                      Swirled Drum Coffee Table
-                    </h3>
-                  </a>
-                  <div class="cart__color-wrapper">
-                    Color:
-                    <span class="cart__color cart__color--brown" title="Brown">
-                      <span class="visually-hidden">Brown</span>
-                    </span>
+                  <div class="cart__descr">
+                    <a href="#" class="cart__item-link">
+                      <h3 class="cart__name">
+                        Swirled Drum Coffee Table
+                      </h3>
+                    </a>
+                    <div class="cart__color-wrapper">
+                      Color:
+                      <span class="cart__color cart__color--brown" title="Brown">
+                        <span class="visually-hidden">Brown</span>
+                      </span>
+                    </div>
                   </div>
                   <input class="count cart__count" type="number" value="1" min="1" max="40"
                     aria-label="Product quatity">
@@ -209,10 +213,10 @@
                     <div class="cart__price">USD 1835.00</div>
                     <div class="cart__item-total-price">(1.00 x USD 1 835.00)</div>
                   </div>
+                  <button class="cart__remove-btn" type="button">
+                    <span class="visually-hidden">Remove product</span>
+                  </button>
                 </div>
-                <button class="cart__remove-btn" type="button">
-                  <span class="visually-hidden">Remove product</span>
-                </button>
               </div>
             </div>
           </li>
