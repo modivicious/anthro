@@ -33,7 +33,7 @@ $(function () {
     ratedFill: "#2A364E",
   });
 
-  $(".product__count, .product__color").styler();
+  $(".count, .select").styler();
 
   $(".product__link").on("click", function (event) {
     event.preventDefault();

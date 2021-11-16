@@ -115,7 +115,7 @@ body {
 }
 
 .breadcrumbs {
-  @extend %mont-500;  
+  @extend %mont-500;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -145,4 +145,123 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 17px 15px;
+}
+
+.count {
+  @extend %neue-400;
+  font-size: 16px;
+  color: $default;
+}
+
+// number
+.jq-number {
+  width: 107px;
+  height: 38px;
+  border: 1px solid $gray;
+  padding: 0;
+  position: relative;
+}
+
+.jq-number__field {
+  width: 39px;
+  height: 36px;
+  border: none;
+  border-right: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.jq-number__field input {
+  padding: 9px 0 8px;
+  text-align: center;
+  border: none;
+}
+
+.jq-number__spin {
+  position: absolute;
+  top: 0;
+  width: 33px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.jq-number__spin:after {
+  content: "-";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jq-number__spin.plus {
+  right: 0;
+}
+
+.jq-number__spin.plus::after {
+  content: "+";
+}
+
+// select
+.jq-selectbox {
+  width: 100%;
+  cursor: pointer;
+}
+
+.jq-selectbox__select {
+  height: 38px;
+  padding: 0 45px 0 12px;
+  border: 1px solid $gray;
+}
+
+.jq-selectbox__select-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.jq-selectbox li {
+  min-height: 38px;
+  padding: 6px 36px 6px;
+  color: #231f20;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46px;
+  height: 100%;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 6px;
+  height: 11px;
+  background-image: url("../images/icons/angle-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.jq-selectbox__dropdown {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.jq-selectbox.opened {
+  .jq-selectbox__trigger-arrow {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
 }

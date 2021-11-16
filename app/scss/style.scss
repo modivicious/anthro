@@ -645,71 +645,22 @@
     margin-bottom: 21px;
   }
 
-  // number
-  &__count {
-    width: 100%;
-    @extend %neue-400;
-    font-size: 16px;
-    color: $default;
-  }
-
   .jq-number {
     margin-bottom: 11px;
   }
 
-  .jq-number.product__count {
-    width: 107px;
-    height: 38px;
-    border: 1px solid $gray;
-    padding: 0;
-    position: relative;
-  }
-
-  .jq-number__field {
-    width: 39px;
-    height: 36px;
-    border: none;
-    border-right: 1px solid $light-gray;
-    border-left: 1px solid $light-gray;
-    border-radius: 0;
-    box-shadow: none;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .jq-number__field input {
-    padding: 9px 0 8px;
-    text-align: center;
-    border: none;
-  }
-
-  .jq-number__spin {
-    position: absolute;
-    top: 0;
-    width: 33px;
-    height: 36px;
-    cursor: pointer;
-  }
-
-  .jq-number__spin:after {
-    content: "-";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .jq-number__spin.plus {
-    right: 0;
-  }
-
-  .jq-number__spin.plus::after {
-    content: "+";
-  }
-
   // select
+  &__count {
+    @extend %neue-400;
+    font-size: 16px;
+    color: $default;
+    text-transform: uppercase;
+  }
   &__color {
     margin-bottom: 11px;
+  }
+  .jq-selectbox__select-text {
+    padding-left: 24px;
   }
   &__option {
     position: relative;
@@ -733,74 +684,8 @@
   &__option--honey::before {
     background-color: #df9951;
   }
-
-  .jq-selectbox {
-    width: 100%;
-    @extend %neue-400;
-    font-size: 16px;
-    color: $default;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  .jq-selectbox__select {
-    height: 38px;
-    padding: 0 45px 0 12px;
-    border: 1px solid $gray;
-  }
-
-  .jq-selectbox__select-text {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 24px;
-  }
-
-  .jq-selectbox li {
-    min-height: 38px;
-    padding: 6px 36px 6px;
-    color: #231f20;
-    display: flex;
-    align-items: center;
-    &:hover {
-      background-color: $light-gray;
-    }
-  }
-
-  .jq-selectbox__trigger {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 46px;
-    height: 100%;
-  }
-
-  .jq-selectbox__trigger-arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
-    width: 6px;
-    height: 11px;
-    background-image: url("../images/icons/angle-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  .jq-selectbox__dropdown {
-    width: 100%;
-    border: 1px solid #ccc;
-    background: #fff;
-  }
-
-  .jq-selectbox.opened {
-    .jq-selectbox__trigger-arrow {
-      transform: translate(-50%, -50%) rotate(-90deg);
-    }
-  }
-
   // ---------
+
   &__form-box {
     display: flex;
     align-items: center;
@@ -906,6 +791,191 @@
   letter-spacing: 0.04em;
   margin-bottom: 35px;
   text-align: center;
+}
+
+//----------- cart -----------
+
+.cart {
+  padding-top: 30px;
+  &__title {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin-bottom: 13px;
+  }
+  &__link {
+    @extend %mont-500;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: $default;
+    letter-spacing: 0.12em;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $default;
+    display: block;
+    width: max-content;
+    margin-bottom: 28px;
+  }
+  &__tab-wrapper {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &__tab-list {
+    padding: 10px 0;
+    display: flex;
+  }
+  &__tab-item {
+    @extend %mont-500;
+    font-size: 12px;
+    text-transform: uppercase;
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+  &__form {
+    padding-bottom: 70px;
+    p {
+      font-size: 11px;
+      color: #c4c4c4;
+    }
+  }
+  &__items {
+    margin-bottom: 20px;
+  }
+  &__item {
+    padding: 30px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+  &__inner {
+    display: flex;
+    gap: 12px;
+    position: relative;
+  }
+  &__img-box {
+    position: relative;
+  }
+  &__img {
+    width: 138px;
+    height: 203px;
+  }
+  &__info {
+    margin-top: 20px;
+  }
+  &__name {
+    @extend %mont-500;
+    font-size: 13px;
+    margin-bottom: 5px;
+    max-width: 105px;
+  }
+  &__color-wrapper {
+    font-size: 12px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 15px;
+  }
+  &__color {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    &--green {
+      background-color: #605c37;
+    }
+    &--bone {
+      background-color: #dfc9bc;
+    }
+    &--brown {
+      background-color: #7e4933;
+    }
+  }
+  .jq-number {
+    margin-bottom: 18px;
+  }
+  &__price-box {
+    @extend %neue-400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100px;
+  }
+  &__old-price {
+    font-size: 11px;
+    text-decoration: line-through;
+    color: $light-gray;
+    & + .cart__price {
+      color: #c7011c;
+    }
+  }
+  &__price {
+    font-size: 13px;
+  }
+  &__item-total-price {
+    font-size: 11px;
+    color: $gray;
+  }
+  &__remove-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons/cross.svg");
+    background-repeat: no-repeat;
+    background-size: 11px;
+    background-position: center;
+    &::before {
+      content: "";
+    }
+  }
+  &__shipping-wrapper {
+    margin-bottom: 21px;
+  }
+  &__shipping {
+    @extend %mont-500;
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+  .jq-selectbox__select {
+    padding-left: 16px;
+  }
+  .jq-selectbox__select-text {
+    padding-left: 102px;
+    position: relative;
+    &::before {
+      content: "Shipping to:";
+      position: absolute;
+      left: 0;
+      color: $gray;
+    }
+  }
+  .jq-selectbox li {
+    padding: 6px 15px 6px;
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+  &__total-names {
+    font-size: 13px;
+  }
+  &__total-names,
+  &__total-prices {
+    display: grid;
+    gap: 17px;
+  }
+  &__total-price{
+    @extend %neue-400;
+    font-size: 13px;
+  }
+  &__checkout-btn {
+    @extend %btn;
+    @extend %mont-400;
+    width: 100%;
+  }
 }
 
 //----------- subscribe -----------

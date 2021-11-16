@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Cyrus Chair | Anthro</title>
-  <meta name="description" content="Product information">
+  <title>Checkout | Anthro</title>
+  <meta name="description" content="Checkout">
   <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
@@ -78,334 +78,181 @@
   </header>
 
   <main class="main">
-    <section class="product">
+    <section class="cart">
       <div class="container">
-        <ol class="breadcrumbs">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Catalog</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Furniture</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Armchairs</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Cyrus Chair</a>
-          </li>
-        </ol>
-        <div class="product__info">
-          <ul class="product__photos">
-            <li class="product__photo">
-              <picture>
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.webp"
-                  type="image/webp">
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.jpg">
-                <source srcset="images/content/product-details/product-details-1-thumb.webp" type="image/webp">
-                <img class="product__img" src="images/content/product-details/product-details-1-thumb.jpg"
-                  alt="Product image">
-              </picture>
+        <h2 class="cart__title">
+          You have 3 items in your shopping cart
+        </h2>
+        <a class="cart__link" href="#">continue shopping</a>
+      </div>
+      <div class="cart__tab-wrapper">
+        <div class="container">
+          <ul class="cart__tab-list">
+            <li class="cart__tab-item">
+              item
             </li>
-            <li class="product__photo">
-              <picture>
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.webp"
-                  type="image/webp">
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.jpg">
-                <source srcset="images/content/product-details/product-details-1-thumb.webp" type="image/webp">
-                <img class="product__img" src="images/content/product-details/product-details-1-thumb"
-                  alt="Product image">
-              </picture>
+            <li class="cart__tab-item">
+              description
             </li>
-            <li class="product__photo">
-              <picture>
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.webp"
-                  type="image/webp">
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.jpg">
-                <source srcset="images/content/product-details/product-details-1-thumb.webp" type="image/webp">
-                <img class="product__img" src="images/content/product-details/product-details-1-thumb"
-                  alt="Product image">
-              </picture>
+            <li class="cart__tab-item">
+              QUANTITY
             </li>
-            <li class="product__photo">
-              <picture>
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.webp"
-                  type="image/webp">
-                <source media="(min-width: 480px)" srcset="images/content/product-details/product-details-1-wide.jpg">
-                <source srcset="images/content/product-details/product-details-1-thumb.webp" type="image/webp">
-                <img class="product__img" src="images/content/product-details/product-details-1-thumb"
-                  alt="Product image">
-              </picture>
+            <li class="cart__tab-item">
+              ITEM TOTAL
             </li>
           </ul>
-          <div class="product__content">
-            <h1 class="product__name">Cyrus Chair</h1>
-            <div class="product__box">
-              <div class="product__rating" data-rateyo-rating="5" aria-label="Rating: 5"></div>
-              <a class="product__link" href="#reviews">2 reviews</a>
-            </div>
-            <p>
-              Boasting clean lines and&nbsp;invitingly soft velvet upholstery, this modern
-              chair&nbsp;is&nbsp;a&nbsp;statement-making piece
-              for&nbsp;a&nbsp;minimalist space.
-            </p>
-            <a class="product__details-link product__link" href="#details">
-              view product details
-            </a>
-            <div class="product__price">USD 1&nbsp;486.00</div>
-            <form class="product__form" action="#">
-              <input class="count product__count" type="number" value="1" min="1" max="40" aria-label="Product quatity">
-              <select class="select product__color" aria-label="Product color">
-                <option class="product__option product__option--limestone" value="Limestone">Limestone</option>
-                <option class="product__option product__option--ivory" value="Ivory">Ivory</option>
-                <option class="product__option product__option--honey" value="Honey">Honey</option>
-              </select>
-              <div class="product__form-box">
-                <button class="product__btn" type="submit">add to cart</button>
-                <button class="product__save-btn" type="button">
-                  <span class="visually-hidden">Save this product</span>
-                </button>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
-
-      <div class="product__details" id="details">
-        <div class="container">
-          <h2 class="product__title">
-            Product details
-          </h2>
-        </div>
-        <div class="product__info-box">
-          <div class="container">
-            <div class="product__info-inner">
-              <h3 class="product__subtitle">Materials</h3>
-              <div class="product__descr">
-                <p>
-                  Cotton velvet upholstery, blackened steel frame and legs, foam and&nbsp;fiber fill cushions.
-                </p>
-                <a class="product__link" href="#">
-                  View care instructions
-                </a>
+      <form class="cart__form" action="#">
+        <ul class="cart__items">
+          <li class="cart__item">
+            <div class="container">
+              <div class="cart__inner">
+                <div class="cart__img-box">
+                  <a class="cart__item-link link-focus" href="#">
+                    <picture>
+                      <source srcset="images/content/cart/cart-1.webp" type="image/webp">
+                      <img class="cart__img" src="images/content/cart/cart-1.jpg" alt="Product image">
+                    </picture>
+                  </a>
+                </div>
+                <div class="cart__info">
+                  <a href="#" class="cart__item-link">
+                    <h3 class="cart__name">
+                      Sherpa Atticus Armchair
+                    </h3>
+                  </a>
+                  <div class="cart__color-wrapper">
+                    Color:
+                    <span class="cart__color cart__color--green" title="Green">
+                      <span class="visually-hidden">Green</span>
+                    </span>
+                  </div>
+                  <input class="count cart__count" type="number" value="1" min="1" max="40"
+                    aria-label="Product quatity">
+                  <div class="cart__price-box">
+                    <div class="cart__old-price">USD 4300.00</div>
+                    <div class="cart__price">USD 1835.00</div>
+                    <div class="cart__item-total-price">(1.00 x USD 1 835.00)</div>
+                  </div>
+                </div>
+                <button class="cart__remove-btn" type="button">
+                  <span class="visually-hidden">Remove product</span>
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="product__info-box">
-          <div class="container">
-            <div class="product__info-inner">
-              <h3 class="product__subtitle">
-                Dimensios
-              </h3>
+          </li>
 
-              <ul class="product__dimensios">
-                <li class="product__dimensios-item">
-                  26.5"H, 28.75"W, 28.5"D
+          <li class="cart__item">
+            <div class="container">
+              <div class="cart__inner">
+                <div class="cart__img-box">
+                  <a class="cart__item-link link-focus" href="#">
+                    <picture>
+                      <source srcset="images/content/cart/cart-2.webp" type="image/webp">
+                      <img class="cart__img" src="images/content/cart/cart-2.jpg" alt="Product image">
+                    </picture>
+                  </a>
+                </div>
+                <div class="cart__info">
+                  <a href="#" class="cart__item-link">
+                    <h3 class="cart__name">
+                      Katina Sleeper Chair
+                    </h3>
+                  </a>
+                  <div class="cart__color-wrapper">
+                    Color:
+                    <span class="cart__color cart__color--bone" title="Bone">
+                      <span class="visually-hidden">Bone</span>
+                    </span>
+                  </div>
+                  <input class="count cart__count" type="number" value="1" min="1" max="40"
+                    aria-label="Product quatity">
+                  <div class="cart__price-box">
+                    <div class="cart__price">USD 1835.00</div>
+                    <div class="cart__item-total-price">(1.00 x USD 1 835.00)</div>
+                  </div>
+                </div>
+                <button class="cart__remove-btn" type="button">
+                  <span class="visually-hidden">Remove product</span>
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="cart__item">
+            <div class="container">
+              <div class="cart__inner">
+                <div class="cart__img-box">
+                  <a class="cart__item-link link-focus" href="#">
+                    <picture>
+                      <source srcset="images/content/cart/cart-3.webp" type="image/webp">
+                      <img class="cart__img" src="images/content/cart/cart-3.jpg" alt="Product image">
+                    </picture>
+                  </a>
+                </div>
+                <div class="cart__info">
+                  <a href="#" class="cart__item-link">
+                    <h3 class="cart__name">
+                      Swirled Drum Coffee Table
+                    </h3>
+                  </a>
+                  <div class="cart__color-wrapper">
+                    Color:
+                    <span class="cart__color cart__color--brown" title="Brown">
+                      <span class="visually-hidden">Brown</span>
+                    </span>
+                  </div>
+                  <input class="count cart__count" type="number" value="1" min="1" max="40"
+                    aria-label="Product quatity">
+                  <div class="cart__price-box">
+                    <div class="cart__price">USD 1835.00</div>
+                    <div class="cart__item-total-price">(1.00 x USD 1 835.00)</div>
+                  </div>
+                </div>
+                <button class="cart__remove-btn" type="button">
+                  <span class="visually-hidden">Remove product</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="container">
+          <div class="cart__bottom">
+            <div class="cart__shipping-wrapper">
+              <select class="select cart__shipping" aria-label="Shipping to:">
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="UK">UK</option>
+              </select>
+              <p>Planned shipping within 1 business day</p>
+            </div>
+            <div class="cart__total">
+              <ul class="cart__total-names">
+                <li class="cart__total-name" id="name-1">
+                  SHIPPING
                 </li>
-                <li class="product__dimensios-item">
-                  Seat: 17"H, 20.5"D
+                <li class="cart__total-name" id="name-2">
+                  TOTAL PRICE
                 </li>
-                <li class="product__dimensios-item">
-                  Back: 26.5"H, 17.75"W
+              </ul>
+              <ul class="cart__total-prices">
+                <li class="cart__total-price" aria-labelledby="name-1">
+                  USD 30.00
                 </li>
-                <li class="product__dimensios-item">
-                  Arms: 21.5"H, 0.75"W
+                <li class="cart__total-price" aria-labelledby="name-2">
+                  USD 10 164.00
                 </li>
               </ul>
             </div>
+            <button class="cart__checkout-btn" type="submit">CHECKOUT</button>
           </div>
-        </div>
-      </div>
-      <div class="product__reviews" id="reviews">
-        <div class="container">
-          <h2 class="product__title">
-            Reviews
-          </h2>
-        </div>
-        <article class="product__review review">
-          <div class="container">
-            <div class="product__info-box review__info-box">
-              <div class="review__author">
-                Elisassl
-              </div>
-              <div class="review__box">
-                <div class="review__rating" data-rateyo-rating="4.5" aria-label="Rating: 4.5"></div>
-                <span class="review__date">2 months ago</span>
-              </div>
-              <h2 class="review__title">Very cute!</h2>
-              <p>
-                I ordered the chair and&nbsp;ottoman. They are super cute and&nbsp;fit perfectly in&nbsp;my room. The
-                only downside
-                is&nbsp;the&nbsp;chair is&nbsp;not&nbsp;super comfortable. We’re using it&nbsp;more
-                as&nbsp;an&nbsp;accent, so&nbsp;it’s not a&nbsp;problem.
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="product__review review">
-          <div class="container">
-            <div class="product__info-box review__info-box">
-              <div class="review__author">
-                Malcolm
-              </div>
-              <div class="review__box">
-                <div class="review__rating" data-rateyo-rating="5" aria-label="Rating: 5"></div>
-                <span class="review__date">3 months ago</span>
-              </div>
-              <h2 class="review__title">Nice Pieces</h2>
-              <p>
-                We ordered two chairs for a loft space. They come in a&nbsp;bit darker than pictured, which for&nbsp;us
-                is&nbsp;a&nbsp;good thing. The&nbsp;chairs are a&nbsp;bit firmer but still comfortable enough
-                to&nbsp;sit for&nbsp;a&nbsp;while. Happy&nbsp;with&nbsp;our purchase.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section class="might-like">
-      <div class="container">
-        <h2 class="might-like__title">You might also like</h2>
-        <ul class="list might-like__list">
-
-          <li class="product-item product-item--sale">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-1.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-1.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Linen Haverhill Chair</a>
-            <span class="product-item__price">USD 1448.00</span>
-            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
-          </li>
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-2.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-2.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Sarrono Accent Chair</a>
-            <span class="product-item__price">USD 1984.00</span>
-          </li>
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-3.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-3.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Katina Sleeper Chair</a>
-            <span class="product-item__price">USD 980.00</span>
-          </li>
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-4.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-4.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Sherpa Atticus Armchair</a>
-            <span class="product-item__price">USD 1835.00</span>
-          </li>
-
-        </ul>
-      </div>
-    </section>
-
-    <section class="recently">
-      <div class="container">
-        <h2 class="recently__title">Recently viewed</h2>
-        <ul class="list recently__list">
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-1.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-1.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Swirled Drum Table</a>
-            <span class="product-item__price">USD 3948.00</span>
-          </li>
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-2.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-2.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Kalmar Canopy Bed</a>
-            <span class="product-item__price">USD 3294.00</span>
-          </li>
-
-          <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-3.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-3.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Tamboured Double Bathroom Vanity</a>
-            <span class="product-item__price">USD 2998.00</span>
-
-          </li>
-
-          <li class="product-item product-item--sale">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-4.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-4.jpg" alt="">
-                </picture>
-              </a>
-            </div>
-            <a class="product-item__name-link" href="#">Pied-A-Terre Sofa</a>
-            <span class="product-item__price">USD 2563.00</span>
-            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
-          </li>
-
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <aside class="subscribe">
-    <div class="container">
-      <form class="subscribe__form">
-        <p>
-          Subscribe for&nbsp;Anthropologie emails and&nbsp;hear about&nbsp;the&nbsp;latest and&nbsp;greatest
-          from&nbsp;our family of&nbsp;brands!
-        </p>
-        <div class="subscribe__box">
-          <input class="subscribe__input" type="email" placeholder="Email" aria-label="Write your email" required>
-          <button class="subscribe__btn">Subscribe</button>
         </div>
       </form>
-    </div>
-  </aside>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -429,7 +276,7 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             help
           </h3>
           <ul class="footer__nav">
@@ -452,7 +299,7 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             About Us
           </h3>
           <ul class="footer__nav">
@@ -480,7 +327,7 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             Connect
           </h3>
           <ul class="footer__nav">
@@ -546,6 +393,7 @@
             </li>
           </ul>
         </div>
+
 
       </div>
       <div class="footer__copy">
