@@ -255,6 +255,28 @@
       padding-bottom: 80px;
     }
   }
+
+  .catalog {
+    .breadcrumbs {
+      margin-bottom: 29px;
+      &__item {
+        font-size: 15px;
+      }
+    }
+    .filter {
+      top: 166px;
+    }
+    &__control {
+      font-size: 18px;
+    }
+    &__chosen {
+      font-size: 20px;
+    }
+    &__items {
+      gap: 24px 19px;
+      padding-bottom: 23px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -395,7 +417,6 @@
     overflow-x: auto;
     grid-auto-flow: column;
     grid-auto-columns: 223px;
-    padding-bottom: 10px; // for horizontal scroll
   }
   .product-item {
     &__img {
@@ -741,6 +762,49 @@
       padding-bottom: 110px;
     }
   }
+
+  .catalog {
+    .breadcrumbs {
+      margin-bottom: 37px;
+      grid-column: 2;
+    }
+    .filter {
+      display: block;
+      position: unset;
+      padding: 0;
+      border: none;
+    }
+    &__wrapper {
+      display: grid;
+      column-gap: 11px;
+    }
+    &__side {
+      .categories {
+        display: grid;
+        margin-bottom: 33px;
+      }
+    }
+    &__info {
+      margin-bottom: 0;
+    }
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      gap: 11px;
+    }
+    .filter-btn {
+      display: none;
+    }
+    &__items {
+      gap: 30px;
+    }
+  }
+
+  .pagination {
+    &__pages {
+      font-size: 20px;
+    }
+  }
 }
 
 @media (min-width: 1000px) {
@@ -799,7 +863,6 @@
     gap: 22px;
     overflow-x: hidden;
     justify-content: center;
-    padding-bottom: 0;
   }
   .feedback {
     &__slide p {
@@ -915,6 +978,16 @@
     }
     .jq-number {
       margin-right: 100px;
+    }
+  }
+
+  .catalog {
+    &__wrapper {
+      column-gap: 15px;
+    }
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px 26px;
     }
   }
 }
@@ -1051,7 +1124,7 @@
         margin-right: 128px;
       }
     }
-    &__items{
+    &__items {
       margin-bottom: 20px;
     }
     &__item {
@@ -1073,7 +1146,7 @@
       max-width: 327px;
       margin-bottom: 11px;
     }
-    &__color-wrapper{
+    &__color-wrapper {
       font-size: 15px;
     }
     .jq-number {
@@ -1090,6 +1163,17 @@
     }
     &__form {
       padding-bottom: 150px;
+    }
+  }
+  .catalog {
+    &__wrapper {
+      column-gap: 55px;
+    }
+    &__items {
+      gap: 39px 30px;
+    }
+    .filter__form {
+      width: 100%;
     }
   }
 }

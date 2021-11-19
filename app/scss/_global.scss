@@ -90,6 +90,78 @@ body {
   overflow: hidden;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 140;
+  transition: 0.25s ease-in;
+  &.overlay--active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.product-item {
+  @extend %neue-400;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+  &__img-box {
+    position: relative;
+  }
+  &__img {
+    height: 214px;
+    width: 137px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 7px;
+  }
+  &__name-link {
+    display: block;
+    margin-bottom: 3px;
+  }
+  &__name {
+    font-size: inherit;
+  }
+  &__price {
+    color: $gray;
+  }
+  &__old-price {
+    text-decoration: line-through;
+    color: #c4c4c4;
+    margin-left: 8px;
+  }
+  &::before {
+    position: absolute;
+    z-index: 7;
+    top: 13px;
+    left: 13px;
+    @extend %mont-500;
+    letter-spacing: 0.03em;
+    color: #c7011c;
+  }
+  &--sale {
+    &::before {
+      content: "sale";
+    }
+    .product-item__price {
+      color: #c7011c;
+    }
+  }
+  &--new {
+    &::before {
+      content: "new";
+      color: $default;
+    }
+  }
+}
+
 .link-focus {
   &:focus-visible {
     outline: none;
@@ -226,7 +298,7 @@ body {
 
 .jq-selectbox li {
   min-height: 38px;
-  padding: 6px 36px 6px;
+  padding: 6px 36px;
   color: #231f20;
   display: flex;
   align-items: center;
@@ -266,5 +338,146 @@ body {
 .jq-selectbox.opened {
   .jq-selectbox__trigger-arrow {
     transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  &__angle {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__pages {
+    @extend %neue-400;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.categories {
+  display: grid;
+  gap: 30px;
+  &__category {
+    @extend %mont-500;
+  }
+}
+
+.filter {
+  &__item {
+    margin-bottom: 33px;
+    transition: all 0.5s;
+    &--open {
+      .filter__title::before {
+        background-image: url("../images/icons/minus-black.svg");
+      }
+      margin-bottom: 0;
+    }
+  }
+  &__form {
+    width: 216px;
+  }
+  &__title {
+    @extend %mont-500;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $default;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/icons/plus-black.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 19px 0 33px;
+  }
+  &__label {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__checkbox {
+    font-size: 15px;
+    padding: 5px 20px 5px 34px;
+    cursor: pointer;
+  }
+  &__input {
+    &:checked + .filter-color__checkbox {
+      background-color: $main-gray;
+    }
+    &:checked + .filter-price__checkbox {
+      color: $default;
+    }
+  }
+  &__reset-btn {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid $default;
+  }
+}
+
+.filter-color {
+  &__name {
+    padding-left: 26px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+    &--limestone::before {
+      background-color: #6a6b66;
+    }
+    &--duckgreen::before {
+      background-color: #605c37;
+    }
+    &--burgundy::before {
+      background-color: #c1001d;
+    }
+    &--classicbrown::before {
+      background-color: #774c1e;
+    }
+    &--pineforest::before {
+      background-color: #9ea8a6;
+    }
+    &--barharborbeige::before {
+      background-color: #eed9d0;
+    }
+    &--mustard::before {
+      background-color: #d3bb44;
+    }
+  }
+}
+
+.filter-price {
+  &__checkbox {
+    @extend %neue-300;
+    font-size: 13px;
+    color: $gray;
+    text-transform: uppercase;
+  }
+  &__count {
+    margin-left: 8px;
+    color: $gray;
   }
 }

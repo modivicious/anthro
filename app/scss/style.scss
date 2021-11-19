@@ -38,7 +38,7 @@
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     z-index: 200;
   }
   &__btn-open {
@@ -54,21 +54,9 @@
       display: block;
     }
   }
-  &__overlay {
-    position: fixed;
+  .overlay {
     top: 60px;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    visibility: hidden;
-    opacity: 0;
     background-color: rgba(0, 0, 0, 0.18);
-    z-index: 140;
-    transition: 0.25s ease-in;
-    &.menu__overlay--active {
-      visibility: visible;
-      opacity: 1;
-    }
   }
   &__list {
     display: flex;
@@ -88,6 +76,7 @@
     height: calc(100vh - 57px);
     background-color: #fff;
     transform: translateX(-100%);
+    will-change: transform;
     transition: all 0.2s;
     &.menu__list--active {
       transform: translateX(0);
@@ -136,10 +125,6 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    color: $main-gray;
-    font-size: 5px;
-    line-height: 8px;
-    text-align: center;
   }
 }
 
@@ -364,59 +349,6 @@
   }
   &__list {
     padding-bottom: 24px;
-  }
-}
-
-.product-item {
-  @extend %neue-400;
-  font-size: 10px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  position: relative;
-  &__img-box {
-    position: relative;
-  }
-  &__img {
-    height: 214px;
-    width: 137px;
-    max-width: 100%;
-    object-fit: cover;
-    margin-bottom: 7px;
-  }
-  &__name-link {
-    display: block;
-    margin-bottom: 3px;
-  }
-  &__price {
-    color: $gray;
-  }
-  &__old-price {
-    text-decoration: line-through;
-    color: #c4c4c4;
-    margin-left: 8px;
-  }
-  &::before {
-    position: absolute;
-    z-index: 7;
-    top: 13px;
-    left: 13px;
-    @extend %mont-500;
-    letter-spacing: 0.03em;
-    color: #c7011c;
-  }
-  &--sale {
-    &::before {
-      content: "sale";
-    }
-    .product-item__price {
-      color: #c7011c;
-    }
-  }
-  &--new {
-    &::before {
-      content: "new";
-      color: $default;
-    }
   }
 }
 
@@ -786,7 +718,7 @@
 
 .might-like__title,
 .recently__title {
-  @extend %neue-300;
+  @extend %neue-400;
   font-size: 25px;
   letter-spacing: 0.04em;
   margin-bottom: 35px;
@@ -798,6 +730,7 @@
 .cart {
   padding-top: 30px;
   &__title {
+    @extend %mont-500;
     font-size: 20px;
     letter-spacing: -0.01em;
     margin-bottom: 13px;
@@ -866,7 +799,7 @@
     margin-bottom: 18px;
   }
   &__name {
-    // @extend %mont-500;
+    @extend %mont-500;
     font-size: 13px;
     margin-bottom: 5px;
     max-width: 105px;
@@ -980,6 +913,106 @@
     @extend %btn;
     @extend %mont-400;
     width: 100%;
+  }
+}
+
+//----------- catalog -----------
+
+.catalog {
+  padding-top: 25px;
+  &__wrapper {
+    position: relative;
+  }
+  .breadcrumbs {
+    margin-bottom: 18px;
+  }
+  .filter {
+    display: none;
+    position: absolute;
+    z-index: 300;
+    top: 144px;
+    right: 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid $gray;
+    &--active {
+      display: block;
+    }
+  }
+  &__top {
+    @extend %mont-500;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 23px;
+  }
+  &__chosen {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+  }
+  &__results {
+    font-size: 14px;
+    color: $gray;
+  }
+  &__side {
+    .categories {
+      display: none;
+    }
+  }
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.03em;
+  }
+  &__sort {
+  }
+  &__word {
+    color: #9c9fa6;
+  }
+  .jq-selectbox {
+    width: 123px;
+  }
+  .jq-selectbox__select {
+    height: 24px;
+    padding: 0 24px 0 9px;
+    border: none;
+  }
+  .jq-selectbox__trigger {
+    width: 24px;
+  }
+  .jq-selectbox li {
+    padding: 6px 12px;
+  }
+  .jq-selectbox__dropdown {
+    top: 30px !important;
+  }
+  &__items {
+    padding: 24px 0 17px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 19px 15px;
+  }
+  .filter-item {
+    width: 216px;
+  }
+}
+
+.filter-btn {
+  padding-right: 33px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 21px;
+    height: 21px;
+    background-image: url("../images/icons/filter.svg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 

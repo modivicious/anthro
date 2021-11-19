@@ -35,6 +35,16 @@ $(function () {
 
   $(".count, .select").styler();
 
+  $(".filter-btn, .catalog__control .overlay").on("click", function () {
+    $(".filter").toggleClass("filter--active");
+    $(".catalog__control .overlay").toggleClass("overlay--active");
+  });
+
+  $(".filter__title").on("click", function () {
+    $(this).closest(".filter__item").toggleClass("filter__item--open");
+    $(this).next().slideToggle();
+  });
+
   $(".product__link").on("click", function (event) {
     event.preventDefault();
     var id = $(this).attr("href"),
@@ -53,13 +63,13 @@ $(function () {
     $(".menu__btn-open").toggleClass("menu__btn-open--hidden");
     $(".menu__btn-close").toggleClass("menu__btn-close--visible");
     $(".menu__list").toggleClass("menu__list--active");
-    $(".menu__overlay").toggleClass("menu__overlay--active");
+    $(".menu .overlay").toggleClass("overlay--active");
     $("body").toggleClass("hide-overflow");
     $(".header").toggleClass("header--white");
   }
 
   $(".menu__btn").on("click", () => toggleMenu());
-  $(".menu__overlay").on("click", () => toggleMenu());
+  $(".menu .overlay").on("click", () => toggleMenu());
 
   $(".intro__btn-start").on("click", function () {
     $(".intro__shop").addClass("intro__shop--active");

@@ -29,7 +29,7 @@
       <button class="menu__btn menu__btn-close" type="button" aria-label="Close navigation menu">
       </button>
 
-      <div class="menu__overlay" aria-hidden="true"></div>
+      <div class="overlay" type="button" aria-hidden="true"></div>
 
       <a class="menu__logo logo--dark" href="#" aria-label='Anthro logo, return to home page'>
         <svg width="62" height="23" xmlns="http://www.w3.org/2000/svg">
@@ -41,12 +41,12 @@
 
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__list-link" href="#">
+          <a class="menu__list-link" href="catalog.html">
             Catalog
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__list-link" href="#">
+          <a class="menu__list-link" href="blog.html">
             Blog
           </a>
         </li>
@@ -63,14 +63,14 @@
           </a>
         </li>
         <li class="menu__icon">
-          <a class="menu__link menu__link--cart" href="#">
+          <a class="menu__link menu__link--cart" href="cart.html">
             <span class="visually-hidden">Cart</span>
           </a>
         </li>
         <li class="menu__icon">
           <a class="menu__link menu__link--heart" href="#">
             <span class="visually-hidden">Saved Items</span>
-            <span class="menu__count" aria-label="Count of saved items">7</span>
+            <span class="menu__count" aria-label="You have saved items"></span>
           </a>
         </li>
       </ul>
@@ -82,10 +82,10 @@
       <div class="container">
         <ol class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Home</a>
+            <a class="breadcrumbs__link" href="index.html">Home</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Catalog</a>
+            <a class="breadcrumbs__link" href="catalog.html">Catalog</a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#">Furniture</a>
@@ -266,62 +266,87 @@
         </article>
       </div>
     </section>
+
     <section class="might-like">
       <div class="container">
         <h2 class="might-like__title">You might also like</h2>
         <ul class="list might-like__list">
 
           <li class="product-item product-item--sale">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-1.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-1.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/might-like/might-like-1.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/might-like/might-like-1.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Linen Haverhill Chair
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Linen Haverhill Chair</a>
-            <span class="product-item__price">USD 1448.00</span>
-            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+              <span class="product-item__price">USD 1448.00</span>
+              <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+            </article>
           </li>
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-2.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-2.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/might-like/might-like-2.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/might-like/might-like-2.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Sarrono Accent Chair
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Sarrono Accent Chair</a>
-            <span class="product-item__price">USD 1984.00</span>
+              <span class="product-item__price">USD 1984.00</span>
+            </article>
           </li>
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-3.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-3.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/might-like/might-like-3.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/might-like/might-like-3.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Katina Sleeper Chair
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Katina Sleeper Chair</a>
-            <span class="product-item__price">USD 980.00</span>
+              <span class="product-item__price">USD 980.00</span>
+            </article>
           </li>
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/might-like/might-like-4.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/might-like/might-like-4.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/might-like/might-like-4.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/might-like/might-like-4.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Sherpa Atticus Armchair
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Sherpa Atticus Armchair</a>
-            <span class="product-item__price">USD 1835.00</span>
+              <span class="product-item__price">USD 1835.00</span>
+            </article>
           </li>
 
         </ul>
@@ -334,57 +359,80 @@
         <ul class="list recently__list">
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-1.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-1.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/recently/recently-1.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/recently/recently-1.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Swirled Drum Table
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Swirled Drum Table</a>
-            <span class="product-item__price">USD 3948.00</span>
+              <span class="product-item__price">USD 3948.00</span>
+            </article>
           </li>
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-2.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-2.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/recently/recently-2.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/recently/recently-2.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Kalmar Canopy Bed
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Kalmar Canopy Bed</a>
-            <span class="product-item__price">USD 3294.00</span>
+              <span class="product-item__price">USD 3294.00</span>
+            </article>
           </li>
 
           <li class="product-item">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-3.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-3.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/recently/recently-3.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/recently/recently-3.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Tamboured Double Bathroom Vanity
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Tamboured Double Bathroom Vanity</a>
-            <span class="product-item__price">USD 2998.00</span>
-
+              <span class="product-item__price">USD 2998.00</span>
+            </article>
           </li>
 
           <li class="product-item product-item--sale">
-            <div class="product-item__img-box">
-              <a class="link-focus" href="#" aria-label="Go to product">
-                <picture>
-                  <source srcset="images/content/recently/recently-4.webp" type="image/webp">
-                  <img class="product-item__img" src="images/content/recently/recently-4.jpg" alt="">
-                </picture>
+            <article>
+              <div class="product-item__img-box">
+                <a class="link-focus" href="#" aria-label="Go to product">
+                  <picture>
+                    <source srcset="images/content/recently/recently-4.webp" type="image/webp">
+                    <img class="product-item__img" src="images/content/recently/recently-4.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <a class="product-item__name-link" href="#">
+                <h2 class="product-item__name">
+                  Pied-A-Terre Sofa
+                </h2>
               </a>
-            </div>
-            <a class="product-item__name-link" href="#">Pied-A-Terre Sofa</a>
-            <span class="product-item__price">USD 2563.00</span>
-            <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+              <span class="product-item__price">USD 2563.00</span>
+              <span class="product-item__old-price">USD 3&nbsp;878.00</span>
+            </article>
           </li>
 
         </ul>
@@ -401,7 +449,7 @@
         </p>
         <div class="subscribe__box">
           <input class="subscribe__input" type="email" placeholder="Email" aria-label="Write your email" required>
-          <button class="subscribe__btn">Subscribe</button>
+          <button class="subscribe__btn" type="submit">Subscribe</button>
         </div>
       </form>
     </div>
@@ -429,7 +477,7 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             help
           </h3>
           <ul class="footer__nav">
@@ -452,17 +500,17 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             About Us
           </h3>
           <ul class="footer__nav">
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="catalog.html">
                 Catalog
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link" href="blog.html">
                 Blog
               </a>
             </li>
@@ -480,7 +528,7 @@
         </div>
 
         <div class="footer__nav-box">
-          <h3 class="footer__title" aria-label="Open the list">
+          <h3 class="footer__title">
             Connect
           </h3>
           <ul class="footer__nav">
