@@ -320,21 +320,29 @@
     flex-direction: row-reverse;
     &__bg {
       height: 100vh;
-      width: 100%;
+      width: calc(50vw + 142px);
     }
     &__descr {
-      padding: 0 25px 64px 25px;
+      padding-bottom: 64px;
       display: flex;
       align-items: flex-end;
+      justify-content: flex-end;
+      width: calc(50vw - 142px);
+    }
+    &__descr-box {
+      position: absolute;
+      left: 0;
+      width: 100%;
     }
     &__inner {
+      margin: unset;
+      max-width: 200px;
       p {
-        width: 200px;
         margin-bottom: 17px;
       }
     }
     &__shop {
-      width: 250px;
+      width: calc(50vw - 142px);
       transform: unset;
       transform: translateX(-200%);
       &.intro__shop--active {
@@ -346,7 +354,7 @@
       width: unset;
     }
     &__nesting-box {
-      left: 250px;
+      left: calc(50vw - 142px);
       height: 100vh;
       align-items: center;
     }
@@ -816,17 +824,21 @@
     padding: 0 20px;
   }
   .intro {
-    &__inner p {
-      width: 280px;
+    &__inner {
+      max-width: 284px;
+    }
+    &__bg {
+      width: calc(50vw + 175px);
     }
     &__descr {
       padding-bottom: 75px;
+      width: calc(50vw - 175px);
     }
     &__shop {
-      width: 330px;
+      width: calc(50vw - 175px);
     }
     &__nesting-box {
-      left: 330px;
+      width: calc(50vw - 175px);
     }
   }
   .offers {
@@ -998,6 +1010,20 @@
   }
   .container {
     max-width: 1180px;
+  }
+  .intro {
+    &__inner {
+      max-width: 302px;
+    }
+    &__bg {
+      width: calc(50vw + 232px);
+    }
+    &__descr {
+      width: calc(50vw - 232px);
+    }
+    &__shop {
+      width: calc(50vw - 232px);
+    }
   }
   .offers {
     padding: 143px 0 150px;

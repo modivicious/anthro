@@ -141,7 +141,6 @@
     background-size: cover;
     background-position: center;
   }
-
   &__descr {
     padding: 22px 24px;
     background-color: $black;
@@ -171,7 +170,8 @@
     &-back {
       position: absolute;
       bottom: 22px;
-      left: 24px;
+      left: 50%;
+      transform: translateX(-50%);
       border-color: $default;
     }
   }
