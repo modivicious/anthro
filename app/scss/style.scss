@@ -62,7 +62,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    gap: 5px;
+    gap: 12px;
     @extend %mont-500;
     font-size: 17px;
     text-transform: uppercase;
@@ -82,11 +82,32 @@
       transform: translateX(0);
     }
   }
+  .categories {
+    padding-top: 25px;
+    gap: 14px;
+    text-transform: none;
+    margin-bottom: 5px;
+    &__sublist {
+      padding-top: 18px;
+    }
+    &__category {
+      padding-left: 23px;
+    }
+    &__btn {
+      padding: 3px 0;
+    }
+    &__link {
+      padding: 3px 0;
+    }
+  }
   &__list-link {
     display: block;
     padding: 5px;
     &.menu__list-link--active {
       border-bottom: 1px solid $default;
+    }
+    &:hover {
+      color: $hover;
     }
   }
   &__logo {
@@ -101,21 +122,22 @@
     z-index: 200;
   }
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 22px;
     height: 22px;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  &__link--search {
-    background-image: url("../images/icons/search.svg");
-  }
-  &__link--cart {
-    background-image: url("../images/icons/cart.svg");
-  }
-  &__link--heart {
-    background-image: url("../images/icons/heart.svg");
     position: relative;
+    &:hover {
+      path {
+        fill: $hover;
+      }
+      .menu__count {
+        background-color: $hover;
+      }
+    }
   }
   &__count {
     position: absolute;
@@ -167,6 +189,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     border-bottom: 2px solid $main-gray;
+    &:hover {
+      border-color: transparent;
+    }
     &-back {
       position: absolute;
       bottom: 22px;
@@ -268,6 +293,15 @@
   &__category {
     position: relative;
     @extend %mont-500;
+    &:hover {
+      .offers__name {
+        color: $hover;
+      }
+      .offers__link {
+        color: $hover;
+        border-color: $hover;
+      }
+    }
   }
   &__img {
     position: absolute;
@@ -363,6 +397,14 @@
       width: 44px;
       height: 44px;
       z-index: 30;
+      path {
+        transition: all 0.1s;
+      }
+      &:hover {
+        path {
+          fill: $hover;
+        }
+      }
     }
     .slick-prev {
       left: -16px;
@@ -421,6 +463,18 @@
       line-height: 1.3;
     }
   }
+  &__img-link {
+    &:hover {
+      & + .blog-intro__link {
+        color: $hover;
+      }
+    }
+  }
+  &__link {
+    &:hover {
+      color: $hover;
+    }
+  }
   &__img {
     object-fit: cover;
     height: 152px;
@@ -464,10 +518,20 @@
     &.mixitup-control-active {
       color: $gray;
     }
+    &:hover {
+      color: $hover;
+    }
   }
   &__article {
     &:not(:last-child) {
       margin-bottom: 70px;
+    }
+  }
+  &__link {
+    &:hover {
+      & + .blog__content .blog__title {
+        color: $hover;
+      }
     }
   }
   &__img {
@@ -490,6 +554,10 @@
     @extend %mont-500;
     font-size: 25px;
     letter-spacing: -0.01em;
+    transition: all 0.05s;
+    &:hover {
+      color: $hover;
+    }
   }
 }
 
@@ -566,6 +634,10 @@
     text-transform: uppercase;
     padding-bottom: 3px;
     border-bottom: 1px solid $default;
+    transition: all 0.1s;
+    &:hover {
+      border-color: transparent;
+    }
   }
   &__details-link {
     margin-bottom: 23px;
@@ -621,19 +693,19 @@
   &__form-box {
     display: flex;
     align-items: center;
-    gap: 8px;
   }
   &__btn {
-    @extend %btn;
     width: 100%;
     padding: 13px;
   }
   &__save-btn {
-    padding: 0 12px;
-    height: 40px;
-    background-image: url("../images/icons/heart.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+    will-change: transform;
+    &:hover {
+      transform: scale(1.18);
+    }
   }
   &__details {
     margin-bottom: 70px;
@@ -746,6 +818,9 @@
     display: block;
     width: max-content;
     margin-bottom: 28px;
+    &:hover {
+      border-color: transparent;
+    }
   }
   &__tab-wrapper {
     border-top: 1px solid #e5e5e5;
@@ -803,6 +878,9 @@
     font-size: 13px;
     margin-bottom: 5px;
     max-width: 105px;
+    &:hover {
+      color: $hover;
+    }
   }
   &__color-wrapper {
     font-size: 12px;
@@ -840,7 +918,7 @@
   &__old-price {
     font-size: 11px;
     text-decoration: line-through;
-    color: $light-gray;
+    color: #c4c4c4;
     & + .cart__price {
       color: #c7011c;
     }
@@ -910,7 +988,6 @@
     letter-spacing: 0.02em;
   }
   &__checkout-btn {
-    @extend %btn;
     @extend %mont-400;
     width: 100%;
   }
@@ -965,8 +1042,6 @@
     display: flex;
     justify-content: space-between;
     letter-spacing: 0.03em;
-  }
-  &__sort {
   }
   &__word {
     color: #9c9fa6;
@@ -1040,9 +1115,9 @@
     }
   }
   &__btn {
-    @extend %btn;
     font-size: 14px;
     width: 100%;
+    border: 1px solid transparent;
   }
 }
 
@@ -1123,55 +1198,36 @@
     font-size: 15px;
   }
   &__link {
-    display: block;
+    display: inline-block;
     padding: 12px 0;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &__box {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  &__locator-link-box {
-    padding-left: 29px;
-    position: relative;
-    min-height: 24px;
-    margin-top: 55px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 24px;
-      height: 24px;
-      background-image: url("../images/icons/location.svg");
-    }
-  }
   &__locator-link {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
     @extend %mont-500;
-    min-height: 24px;
     font-size: 13px;
-    margin-top: 40px;
-    align-self: flex-start;
-    padding-left: 29px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 24px;
-      height: 24px;
-      background-image: url("../images/icons/location.svg");
+    svg {
+      margin-right: 5px;
     }
-    &::after {
-      content: "";
-      display: block;
-      margin-top: 1px;
-      height: 1px;
-      background-color: $main-gray;
+    span {
+      border-bottom: 1px solid $main-gray;
+    }
+    &:hover {
+      color: $hover;
+      path {
+        fill: $hover;
+      }
+      span {
+        border-bottom: 1px solid $hover;
+      }
     }
   }
   .socials {
@@ -1187,7 +1243,12 @@
   display: flex;
   gap: 10px;
   &__link {
-    display: block;
+    display: flex;
+    &:hover {
+      path {
+        fill: $hover;
+      }
+    }
   }
 }
 

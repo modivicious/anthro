@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy Furniture Online | Anthro</title>
-  <meta name="description" content="Furniture online shop: home page">
+  <title>Furniture Online | Anthro</title>
+  <meta name="description" content="Furniture online shop - home page">
   <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
@@ -62,17 +62,35 @@
       </ul>
       <ul class="menu__icons">
         <li class="menu__icon">
-          <a class="menu__link menu__link--search" href="#">
+          <a class="menu__link" href="#">
+            <svg width="16" height="16">
+              <path
+                d="M15.2 14.51 11 10.29A5.89 5.89 0 0 0 6.5.7 5.86 5.86 0 0 0 .67 6.6a5.86 5.86 0 0 0 5.82 5.88c1.39 0 2.66-.49 3.66-1.3l4.18 4.22a.6.6 0 0 0 .86 0 .62.62 0 0 0 0-.88Zm-8.7-3.28A4.62 4.62 0 0 1 1.9 6.6a4.62 4.62 0 0 1 4.6-4.64c2.52 0 4.58 2.08 4.58 4.64a4.62 4.62 0 0 1-4.59 4.64Z"
+                fill="#2A364E" />
+            </svg>
             <span class="visually-hidden">Search</span>
           </a>
         </li>
         <li class="menu__icon">
-          <a class="menu__link menu__link--cart" href="cart.html">
+          <a class="menu__link" href="cart.html">
+            <svg width="23" height="23">
+              <path
+                d="M8.039 13.431h10.249c.252 0 .474-.17.543-.416l2.26-8.038A.582.582 0 0 0 21 4.474a.562.562 0 0 0-.452-.228H6.736l-.404-1.847a.567.567 0 0 0-.552-.45H2.39a.57.57 0 0 0-.566.574.57.57 0 0 0 .565.574h2.938l2.04 9.328c-.6.265-1.022.873-1.022 1.58 0 .95.76 1.722 1.695 1.722h10.248a.57.57 0 0 0 .565-.574.57.57 0 0 0-.565-.574H8.04a.57.57 0 0 1-.565-.574.57.57 0 0 1 .564-.574Zm11.76-8.037-1.938 6.889H8.494l-1.507-6.89h12.812Z"
+                fill="#2A364E" />
+              <path
+                d="M7.335 17.564A1.84 1.84 0 0 0 9.173 19.4a1.84 1.84 0 0 0 1.837-1.837 1.84 1.84 0 0 0-1.837-1.837 1.84 1.84 0 0 0-1.838 1.837Zm1.838-.613a.613.613 0 1 1-.002 1.227.613.613 0 0 1 .002-1.227ZM15.602 17.564A1.84 1.84 0 0 0 17.44 19.4a1.84 1.84 0 0 0 1.837-1.837 1.84 1.84 0 0 0-1.837-1.837 1.84 1.84 0 0 0-1.837 1.837Zm1.837-.613a.613.613 0 1 1-.001 1.227.613.613 0 0 1 .001-1.227Z"
+                fill="#2A364E" />
+            </svg>
             <span class="visually-hidden">Cart</span>
           </a>
         </li>
         <li class="menu__icon">
-          <a class="menu__link menu__link--heart" href="#">
+          <a class="menu__link" href="#">
+            <svg width="19" height="18">
+              <path
+                d="M16.67 2.4a4.78 4.78 0 0 0-6.99-.01l-.3.33-.31-.33a4.77 4.77 0 0 0-7 0 5.35 5.35 0 0 0 0 7.28l6.85 7.22a.62.62 0 0 0 .9 0l6.85-7.22a5.35 5.35 0 0 0 0-7.28Zm-.9 6.4-6.4 6.75-6.4-6.74a4.09 4.09 0 0 1 0-5.56 3.53 3.53 0 0 1 5.19 0l.76.8c.25.25.66.25.9 0l.77-.8a3.53 3.53 0 0 1 5.18 0 4.05 4.05 0 0 1 0 5.56Z"
+                fill="#2A364E" />
+            </svg>
             <span class="visually-hidden">Saved Items</span>
             <span class="menu__count">
               <span class="visually-hidden">You have saved items</span>
@@ -86,9 +104,7 @@
   <main class="main main--home">
     <h1 class="visually-hidden">Furniture Online Store</h1>
     <section class="intro">
-
-      <div class="intro__bg" style="background-image: 
-      url(images/intro-bg.jpg)"></div>
+      <div class="intro__bg" style="background-image: url(images/intro-bg.jpg)"></div>
       <div class="intro__descr">
         <div class="intro__descr-box">
           <div class="container">
@@ -450,7 +466,6 @@
           </ul>
           <button class="intro__btn intro__btn-back" type="button">Return</button>
         </div>
-
       </div>
     </section>
     <section class="offers">
@@ -683,7 +698,7 @@
         <h2 class="title blog-intro__title">Blog</h2>
         <ul class="blog-intro__list">
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
+            <a class="blog-intro__img-link" href="#" aria-label="Go to blog article">
               <picture>
                 <source srcset="images/content/blog-intro/blog-intro-1.webp" type="image/webp">
                 <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-1.jpg" alt="">
@@ -703,7 +718,7 @@
             </p>
           </li>
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
+            <a class="blog-intro__img-link" href="#" aria-label="Go to blog article">
               <picture>
                 <source srcset="images/content/blog-intro/blog-intro-2.webp" type="image/webp">
                 <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-2.jpg" alt="">
@@ -723,7 +738,7 @@
             </p>
           </li>
           <li class="blog-intro__item">
-            <a class="blog-intro__link" href="#" aria-label="Go to blog article">
+            <a class="blog-intro__img-link" href="#" aria-label="Go to blog article">
               <picture>
                 <source srcset="images/content/blog-intro/blog-intro-3.webp" type="image/webp">
                 <img class="blog-intro__img" src="images/content/blog-intro/blog-intro-3.jpg" alt="">
@@ -760,7 +775,7 @@
         </p>
         <div class="subscribe__box">
           <input class="subscribe__input" type="email" placeholder="Email" aria-label="Write your email" required>
-          <button class="subscribe__btn" type="submit">Subscribe</button>
+          <button class="btn subscribe__btn" type="submit">Subscribe</button>
         </div>
       </form>
     </div>
@@ -863,7 +878,15 @@
 
         <div class="footer__box">
           <a class="footer__locator-link" href="#" target="_blank">
-            Store Locator
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C7.348 0 3.562 3.785 3.562 8.438a8.42 8.42 0 0 0 1.26 4.436l6.698 10.794a.703.703 0 0 0 .597.332h.006a.703.703 0 0 0 .597-.342l6.527-10.898a8.427 8.427 0 0 0 1.19-4.322C20.438 3.785 16.652 0 12 0Zm6.04 12.038-5.933 9.908-6.09-9.813A7.022 7.022 0 0 1 4.96 8.438C4.96 4.56 8.123 1.396 12 1.396c3.877 0 7.036 3.163 7.036 7.04a7.025 7.025 0 0 1-.995 3.601Z"
+                fill="#ECEBEB" />
+              <path
+                d="M12 4.219a4.224 4.224 0 0 0-4.219 4.218A4.213 4.213 0 0 0 12 12.657a4.21 4.21 0 0 0 4.219-4.22A4.224 4.224 0 0 0 12 4.22Zm0 7.04a2.824 2.824 0 0 1-2.822-2.822A2.832 2.832 0 0 1 12 5.617a2.828 2.828 0 0 1 2.817 2.822A2.819 2.819 0 0 1 12 11.258Z"
+                fill="#ECEBEB" />
+            </svg>
+            <span>Store Locator</span>
           </a>
 
           <ul class="socials">

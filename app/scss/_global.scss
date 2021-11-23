@@ -80,6 +80,27 @@ body {
   border-bottom: 2px solid $default;
   color: $default;
   letter-spacing: 0.03em;
+  &:hover {
+    border: transparent;
+  }
+}
+
+.btn {
+  @extend %mont-500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $main-gray;
+  background-color: $default;
+  padding: 15px 5px 14px;
+  min-width: 200px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: $gray;
+    background-color: #fff;
+    color: $default;
+  }
 }
 
 .link-box {
@@ -114,6 +135,11 @@ body {
   position: relative;
   &__img-box {
     position: relative;
+    &:hover {
+      & + .product-item__name-link {
+        color: $hover;
+      }
+    }
   }
   &__img {
     height: 214px;
@@ -125,6 +151,9 @@ body {
   &__name-link {
     display: block;
     margin-bottom: 3px;
+    &:hover {
+      color: $hover;
+    }
   }
   &__name {
     font-size: inherit;
@@ -203,6 +232,9 @@ body {
         content: "/";
         position: absolute;
         right: 0;
+      }
+      &:not(&::after):hover {
+        color: $hover;
       }
     }
     &:last-child {
@@ -303,6 +335,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #fff;
+  color: $default;
   &:hover {
     background-color: $light-gray;
   }
@@ -352,6 +385,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    path {
+      transition: all 0.07s linear;
+    }
+    &:not(.pagination__angle--disabled):hover {
+      path {
+        fill: $default;
+      }
+    }
   }
   &__pages {
     @extend %neue-400;
@@ -362,9 +403,57 @@ body {
 
 .categories {
   display: grid;
-  gap: 30px;
-  &__category {
+  gap: 18px;
+  font-size: 16px;
+  &__btn {
     @extend %mont-500;
+    padding: 6px 0;
+    &:hover {
+      color: $hover;
+      border-color: $hover;
+    }
+  }
+  &__category {
+    &.categories__category--active {
+      .categories__btn {
+        border-bottom: 1px solid $default;
+        &:hover {
+          border-color: $hover;
+        }
+      }
+      .categories__sublist {
+        display: block;
+      }
+    }
+    &:first-child {
+      .categories__btn {
+        padding-top: 0;
+      }
+    }
+  }
+  &__sublist {
+    padding: 24px 0 8px;
+    display: none;
+  }
+  &__subcategory {
+    padding-left: 36px;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    padding: 4px 0;
+    &--active {
+      border-bottom: 1px solid $default;
+      &:hover {
+        border-color: $hover;
+      }
+    }
+    &:hover {
+      color: $hover;
+    }
   }
 }
 

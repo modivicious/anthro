@@ -8,6 +8,8 @@
   .title {
     font-size: 45px;
   }
+  .menu {
+  }
   .intro {
     &__descr {
       padding: 43px 28px 48px 24px;
@@ -280,14 +282,12 @@
 }
 
 @media (min-width: 768px) {
-  .menu {
-    max-width: 768px;
-  }
   .container {
     max-width: 768px;
     padding: 0 25px;
   }
   .menu {
+    max-width: 768px;
     &__btn {
       display: none;
     }
@@ -314,6 +314,9 @@
       padding: unset;
       height: auto;
       background-color: unset;
+    }
+    .categories{
+      display: none;
     }
   }
   .intro {
@@ -520,9 +523,12 @@
     }
     &__item {
       padding-left: 0;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
     }
     &__link {
-      padding: 3px 0;
+      padding: 1px 0;
     }
     &__box {
       justify-content: flex-end;
@@ -608,7 +614,7 @@
       margin-bottom: 23px;
     }
     &__form-box {
-      gap: 17px;
+      gap: 7px;
     }
     .jq-selectbox {
       width: 229px;
@@ -948,7 +954,7 @@
       width: 203px;
     }
     &__form-box {
-      gap: 9px;
+      gap: 0;
     }
     &__info {
       margin-bottom: 100px;
@@ -1197,9 +1203,6 @@
     }
     &__items {
       gap: 39px 30px;
-    }
-    .filter__form {
-      width: 100%;
     }
   }
 }

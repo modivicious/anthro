@@ -35,6 +35,10 @@ $(function () {
 
   $(".count, .select").styler();
 
+  $(".categories__btn").on("click", function () {
+    $(this).next().slideToggle();
+  });
+
   $(".filter-btn, .catalog__control .overlay").on("click", function () {
     $(".filter").toggleClass("filter--active");
     $(".catalog__control .overlay").toggleClass("overlay--active");
