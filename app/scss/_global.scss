@@ -136,6 +136,9 @@ body {
   &__img-box {
     position: relative;
     &:hover {
+      .link-focus::before {
+        background-color: rgba(#fff, 0.23);
+      }
       & + .product-item__name-link {
         color: $hover;
       }
@@ -206,6 +209,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    transition: all 0.2s linear;
   }
 }
 
@@ -407,7 +411,12 @@ body {
   font-size: 16px;
   &__btn {
     @extend %mont-500;
-    padding: 6px 0;
+    width: 100%;
+    text-align-last: left;
+    span {
+      display: inline-block;
+      padding: 6px 0;
+    }
     &:hover {
       color: $hover;
       border-color: $hover;
@@ -415,18 +424,15 @@ body {
   }
   &__category {
     &.categories__category--active {
-      .categories__btn {
+      .categories__btn span {
         border-bottom: 1px solid $default;
         &:hover {
           border-color: $hover;
         }
       }
-      .categories__sublist {
-        display: block;
-      }
     }
     &:first-child {
-      .categories__btn {
+      .categories__btn span{
         padding-top: 0;
       }
     }
@@ -442,10 +448,14 @@ body {
     }
   }
   &__link {
-    display: inline-block;
+    display: block;
+    @extend %mont-400;
     font-size: 16px;
-    padding: 4px 0;
-    &--active {
+    span {
+      display: inline-block;
+      padding: 4px 0;
+    }
+    &--active span {
       border-bottom: 1px solid $default;
       &:hover {
         border-color: $hover;

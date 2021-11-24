@@ -25,12 +25,12 @@
     <nav class="menu">
       <button class="menu__btn menu__btn-open" type="button" aria-label="Open navigation menu">
       </button>
-  
+
       <button class="menu__btn menu__btn-close" type="button" aria-label="Close navigation menu">
       </button>
-  
+
       <div class="overlay" role="button" aria-hidden="true"></div>
-  
+
       <a class="menu__logo logo--dark" href="index.html" aria-label='Anthro logo, return to home page'>
         <svg width="62" height="23" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -38,21 +38,21 @@
             fill="#2A364E" />
         </svg>
       </a>
-  
+
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__list-link" href="catalog.html">
-            Catalog
+            <span>Catalog</span>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__list-link" href="blog.html">
-            Blog
+            <span>Blog</span>
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__list-link" href="#">
-            Contact
+            <span>Contact</span>
           </a>
         </li>
       </ul>
@@ -176,13 +176,16 @@
             </a>
             <div class="product__price">USD 1&nbsp;486.00</div>
             <form class="product__form" action="#">
-              <input class="count product__count" type="number" value="1" min="1" max="40" aria-label="Product quatity">
-              <select class="select product__color" aria-label="Product color">
-                <option class="product__option product__option--limestone" value="Limestone">Limestone</option>
-                <option class="product__option product__option--ivory" value="Ivory">Ivory</option>
-                <option class="product__option product__option--honey" value="Honey">Honey</option>
-              </select>
               <div class="product__form-box">
+                <input class="count product__count" type="number" value="1" min="1" max="40"
+                  aria-label="Product quatity">
+                <select class="select product__color" aria-label="Product color">
+                  <option class="product__option product__option--limestone" value="Limestone">Limestone</option>
+                  <option class="product__option product__option--ivory" value="Ivory">Ivory</option>
+                  <option class="product__option product__option--honey" value="Honey">Honey</option>
+                </select>
+              </div>
+              <div class="product__btn-box">
                 <button class="btn product__btn" type="submit">add to cart</button>
                 <button class="product__save-btn" type="button">
                   <svg width="19" height="18">
@@ -500,7 +503,7 @@
             <img class="footer__pay-logo--mastercard" src="images/icons/master-card.svg" alt="Master Card">
           </div>
         </div>
-  
+
         <div class="footer__nav-box">
           <h3 class="footer__title">
             help
@@ -523,7 +526,7 @@
             </li>
           </ul>
         </div>
-  
+
         <div class="footer__nav-box">
           <h3 class="footer__title">
             About Us
@@ -551,7 +554,7 @@
             </li>
           </ul>
         </div>
-  
+
         <div class="footer__nav-box">
           <h3 class="footer__title">
             Connect
@@ -574,7 +577,7 @@
             </li>
           </ul>
         </div>
-  
+
         <div class="footer__box">
           <a class="footer__locator-link" href="#" target="_blank">
             <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -587,7 +590,7 @@
             </svg>
             <span>Store Locator</span>
           </a>
-  
+
           <ul class="socials">
             <li class="socials__item">
               <a class="socials__link" href="#" target="_blank">
@@ -627,7 +630,7 @@
             </li>
           </ul>
         </div>
-  
+
       </div>
       <div class="footer__copy">
         2020 URBN.com. All Rights Reserved.

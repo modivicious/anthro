@@ -8,8 +8,18 @@
   .title {
     font-size: 45px;
   }
-  .menu {
+  .categories {
+    font-size: 20px;
+    &__link {
+      font-size: 20px;
+    }
+    &__category--active {
+      .categories__sublist {
+        display: block;
+      }
+    }
   }
+
   .intro {
     &__descr {
       padding: 43px 28px 48px 24px;
@@ -19,6 +29,9 @@
     }
     &__title {
       font-size: 40px;
+    }
+    &__item {
+      font-size: 20px;
     }
   }
   .offers {
@@ -288,6 +301,7 @@
   }
   .menu {
     max-width: 768px;
+    padding: 0 25px;
     &__btn {
       display: none;
     }
@@ -315,8 +329,13 @@
       height: auto;
       background-color: unset;
     }
-    .categories{
+    .categories {
       display: none;
+    }
+  }
+  .categories {
+    &__link {
+      font-size: 16px;
     }
   }
   .intro {
@@ -348,13 +367,28 @@
       width: calc(50vw - 142px);
       transform: unset;
       transform: translateX(-200%);
+      justify-content: unset;
+      & > * {
+        width: 230px;
+        margin-left: auto;
+      }
       &.intro__shop--active {
         transform: translateX(0);
       }
     }
+    &__shop-logo {
+      display: block;
+    }
+    &__btn-box {
+      text-align: left;
+      padding-top: 0;
+    }
     &__list {
       position: unset;
-      width: unset;
+      justify-content: unset;
+      align-content: center;
+      margin-top: 0;
+      height: calc(100vh - 93px);
     }
     &__nesting-box {
       left: calc(50vw - 142px);
@@ -364,7 +398,8 @@
     &__nesting {
       display: grid;
       justify-content: center;
-      height: calc(100vh - 150px);
+      align-content: center;
+      height: calc(100vh - 93px);
       overflow-y: auto;
       gap: 10px;
       grid-auto-rows: max-content;
@@ -420,6 +455,9 @@
     &__title {
       margin-bottom: 55px;
     }
+    &__list {
+      margin-bottom: 24px;
+    }
   }
   .list {
     grid-template-columns: unset;
@@ -428,6 +466,7 @@
     overflow-x: auto;
     grid-auto-flow: column;
     grid-auto-columns: 223px;
+    padding-bottom: 24px;
   }
   .product-item {
     &__img {
@@ -471,6 +510,7 @@
       overflow-x: auto;
       grid-auto-flow: column;
       grid-auto-columns: 303px;
+      margin-bottom: 24px;
     }
   }
   .subscribe {
@@ -613,15 +653,15 @@
     &__price {
       margin-bottom: 23px;
     }
-    &__form-box {
+    &__form-box{
+      gap: 13px;
+      margin-bottom: 17px;
+    }
+    &__btn-box {
       gap: 7px;
     }
     .jq-selectbox {
       width: 229px;
-      margin-bottom: 18px;
-    }
-    .jq-number {
-      margin-right: 9px;
     }
     &__title {
       font-size: 35px;
@@ -842,9 +882,15 @@
     }
     &__shop {
       width: calc(50vw - 175px);
+      & > * {
+        width: 312px;
+      }
     }
     &__nesting-box {
-      width: calc(50vw - 175px);
+      left: calc(50vw - 175px);
+    }
+    &__item {
+      font-size: 25px;
     }
   }
   .offers {
@@ -881,6 +927,7 @@
     gap: 22px;
     overflow-x: hidden;
     justify-content: center;
+    padding-bottom: 24px;
   }
   .feedback {
     &__slide p {
@@ -888,11 +935,17 @@
       margin-bottom: 88px;
     }
   }
+  .bestsellers {
+    &__list {
+      margin-bottom: 0;
+    }
+  }
   .blog-intro {
     &__list {
       gap: 25px;
       overflow-x: hidden;
       justify-content: center;
+      margin-bottom: 0;
     }
     &__name {
       max-width: 255px;
@@ -947,13 +1000,14 @@
     .jq-selectbox {
       display: block;
     }
-    .jq-number {
-      margin-bottom: 18px;
-    }
     &__btn {
       width: 203px;
     }
-    &__form-box {
+    &__form-box{
+      flex-direction: column;
+      gap: 17px;
+    }
+    &__btn-box {
       gap: 0;
     }
     &__info {
@@ -1006,6 +1060,9 @@
     &__items {
       grid-template-columns: repeat(3, 1fr);
       gap: 30px 26px;
+      .product-item:nth-child(3n) {
+        display: block;
+      }
     }
   }
 }
@@ -1029,6 +1086,15 @@
     }
     &__shop {
       width: calc(50vw - 232px);
+      & > * {
+        width: 344px;
+      }
+    }
+    &__list {
+      width: 344px;
+    }
+    &__nesting-box {
+      left: calc(50vw - 232px);
     }
   }
   .offers {
@@ -1204,5 +1270,11 @@
     &__items {
       gap: 39px 30px;
     }
+  }
+}
+
+@media (min-width: 1770px) {
+  .intro__nesting-box {
+    width: 640px;
   }
 }

@@ -61,7 +61,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     gap: 12px;
     @extend %mont-500;
     font-size: 17px;
@@ -73,7 +73,7 @@
     z-index: 180;
     width: 320px;
     padding: 38px 23px 0 38px;
-    height: calc(100vh - 57px);
+    height: calc(100vh - 60px);
     background-color: #fff;
     transform: translateX(-100%);
     will-change: transform;
@@ -103,8 +103,13 @@
   &__list-link {
     display: block;
     padding: 5px;
+    span {
+      border-bottom: 1px solid transparent;
+    }
     &.menu__list-link--active {
-      border-bottom: 1px solid $default;
+      span{
+        border-color: $default;
+      }
     }
     &:hover {
       color: $hover;
@@ -193,10 +198,6 @@
       border-color: transparent;
     }
     &-back {
-      position: absolute;
-      bottom: 22px;
-      left: 50%;
-      transform: translateX(-50%);
       border-color: $default;
     }
   }
@@ -218,25 +219,34 @@
       transform: translateY(0);
     }
   }
+  &__shop-logo {
+    display: none;
+  }
   &__list {
     position: relative;
     display: grid;
     grid-auto-rows: max-content;
     justify-content: center;
     gap: 10px;
+    margin-top: 40px;
     height: calc(100vh - 150px);
     width: 100vw;
     overflow-y: auto;
   }
+  &__btn-box {
+    text-align: center;
+    padding-top: 30px;
+  }
   &__item {
     @extend %mont-500;
-    font-size: 25px;
+    font-size: 17px;
   }
   &__link {
     display: block;
     padding: 7px;
+    border-bottom: 1px solid transparent;
     &.intro__link--active {
-      border-bottom: 1px solid $default;
+      border-color: $default;
     }
   }
   &__nesting-box {
@@ -262,6 +272,14 @@
   &__nesting-link {
     display: block;
     padding: 7px;
+    span {
+      border-bottom: 1px solid transparent;
+    }
+    &:hover {
+      span {
+        border-color: $default;
+      }
+    }
   }
 }
 
@@ -648,8 +666,10 @@
     letter-spacing: 0.03em;
     margin-bottom: 21px;
   }
-
-  .jq-number {
+  &__form-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
     margin-bottom: 11px;
   }
 
@@ -659,9 +679,6 @@
     font-size: 16px;
     color: $default;
     text-transform: uppercase;
-  }
-  &__color {
-    margin-bottom: 11px;
   }
   .jq-selectbox__select-text {
     padding-left: 24px;
@@ -690,7 +707,7 @@
   }
   // ---------
 
-  &__form-box {
+  &__btn-box {
     display: flex;
     align-items: center;
   }
@@ -1068,6 +1085,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 19px 15px;
+    .product-item:nth-child(3n) {
+      display: none;
+    }
   }
   .filter-item {
     width: 216px;
