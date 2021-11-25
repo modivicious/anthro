@@ -1,5 +1,6 @@
 $(function () {
   const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
 
   $(".feedback__slider").slick({
     prevArrow:
@@ -49,8 +50,8 @@ $(function () {
     $(this).next().slideToggle();
   });
 
-  $(".product__link").on("click", function (event) {
-    event.preventDefault();
+  $(".product__link").on("click", function (e) {
+    e.preventDefault();
     var id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body,html").animate({ scrollTop: top }, 400);
@@ -110,10 +111,18 @@ $(function () {
     }
   });
 
+  $(".to-top__btn").on("click", function () {
+    $("body, html").animate({ scrollTop: 0 }, 300);
+  });
+
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > screenHeight * 1.5) $(".to-top").addClass("show");
+    else $(".to-top").removeClass("show");
+  });
+
   if (screenWidth < 768) {
     var lastScroll = 0;
     const header = document.querySelector(".header");
-    const screenHeight = window.screen.height;
 
     const scrollPosition = () =>
       window.pageYOffset || document.documentElement.scrollTop;

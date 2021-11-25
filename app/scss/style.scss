@@ -107,12 +107,17 @@
       border-bottom: 1px solid transparent;
     }
     &.menu__list-link--active {
-      span{
+      span {
         border-color: $default;
       }
     }
     &:hover {
       color: $hover;
+      &.menu__list-link--active {
+        span {
+          border-color: $hover;
+        }
+      }
     }
   }
   &__logo {
@@ -666,7 +671,7 @@
     letter-spacing: 0.03em;
     margin-bottom: 21px;
   }
-  &__form-box{
+  &__form-box {
     display: flex;
     flex-wrap: wrap;
     gap: 11px;

@@ -5,8 +5,9 @@ const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
+const webpConvert = require("gulp-webp");
 const del = require("del");
+const webpDel = require("del");
 const { notify } = require("browser-sync");
 const browserSync = require("browser-sync").create();
 
@@ -35,10 +36,10 @@ function styles() {
 
 function scripts() {
   return src([
-    "node_modules/jquery/dist/jquery.js",
-    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/mixitup/dist/mixitup.min.js",
-    "node_modules/rateyo/src/jquery.rateyo.js",
+    "node_modules/rateyo/min/jquery.rateyo.min.js",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
     "app/js/main.js",
   ])
@@ -63,8 +64,14 @@ function images() {
     .pipe(dest("dist/images"));
 }
 
-function webpConvert() {
-  return src("app/images/**/*.*").pipe(webp()).pipe(dest("app/images"));
+function webp() {
+  return src("app/images/**/*.*")
+    .pipe(webpConvert({ quality: 90 }))
+    .pipe(dest("app/images"));
+}
+
+function webpDelete() {
+  return webpDel("app/images/**/*.webp");
 }
 
 function build() {
@@ -88,7 +95,8 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
-exports.webpConvert = webpConvert;
+exports.webp = webp;
+exports.webpDelete = webpDelete;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 

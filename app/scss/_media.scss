@@ -139,6 +139,9 @@
         margin-bottom: 80px;
       }
     }
+    &__content p{
+      font-size: 16px;
+    }
     &__filter-list {
       justify-content: space-between;
     }
@@ -298,6 +301,10 @@
   .container {
     max-width: 768px;
     padding: 0 25px;
+  }
+  .to-top{
+    left: 50px;
+    bottom: 25px;
   }
   .menu {
     max-width: 768px;
@@ -594,6 +601,9 @@
     }
     &__content {
       margin-left: 15px;
+      p{
+        font-size: 20px;
+      }
     }
     &__article {
       display: grid;
@@ -653,7 +663,7 @@
     &__price {
       margin-bottom: 23px;
     }
-    &__form-box{
+    &__form-box {
       gap: 13px;
       margin-bottom: 17px;
     }
@@ -947,9 +957,6 @@
       justify-content: center;
       margin-bottom: 0;
     }
-    &__name {
-      max-width: 255px;
-    }
   }
   .footer {
     &__inner {
@@ -1003,7 +1010,7 @@
     &__btn {
       width: 203px;
     }
-    &__form-box{
+    &__form-box {
       flex-direction: column;
       gap: 17px;
     }
@@ -1140,6 +1147,12 @@
     }
     &__img {
       height: 263px;
+    }
+    &__name {
+      max-width: 284px;
+    }
+    &__item p{
+      max-width: 353px;
     }
     &__name,
     &__date,

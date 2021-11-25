@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog | Anthro</title>
   <meta name="description" content="Furniture list">
-  <link rel="preload" href="fonts/NeueHaasDisplay-Medium.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
+  <meta name="theme-color" content="#ecebeb">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Light.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/NeueHaasDisplay-Roman.woff2" as="font" crossorigin>
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1434,7 +1434,27 @@
                   <form class="filter__form" action="#">
                     <div class="filter__title">Material</div>
                     <div class="filter__content">
-
+                      <label class="filter__label">
+                        <input class="filter__input visually-hidden" type="checkbox">
+                        <span class="filter__checkbox filter__material-checkbox">
+                          Wood
+                          <span class="filter__count">(58)</span>
+                        </span>
+                      </label>
+                      <label class="filter__label">
+                        <input class="filter__input visually-hidden" type="checkbox">
+                        <span class="filter__checkbox filter__material-checkbox">
+                          Velvet
+                          <span class="filter__count">(11)</span>
+                        </span>
+                      </label>
+                      <label class="filter__label">
+                        <input class="filter__input visually-hidden" type="checkbox">
+                        <span class="filter__checkbox filter__material-checkbox">
+                          Rattan
+                          <span class="filter__count">(3)</span>
+                        </span>
+                      </label>
                     </div>
                   </form>
                 </li>
@@ -1447,21 +1467,21 @@
                         <input class="filter__input visually-hidden" type="checkbox">
                         <span class="filter__checkbox filter-price__checkbox">
                           usd 50 - usd 500
-                          <span class="filter-price__count">(10)</span>
+                          <span class="filter__count">(10)</span>
                         </span>
                       </label>
                       <label class="filter__label">
                         <input class="filter__input visually-hidden" type="checkbox">
                         <span class="filter__checkbox filter-price__checkbox">
                           usd 500 - usd 1500
-                          <span class="filter-price__count">(34)</span>
+                          <span class="filter__count">(34)</span>
                         </span>
                       </label>
                       <label class="filter__label">
                         <input class="filter__input visually-hidden" type="checkbox">
                         <span class="filter__checkbox filter-price__checkbox">
                           usd 1500 - usd 3000
-                          <span class="filter-price__count">(25)</span>
+                          <span class="filter__count">(25)</span>
                         </span>
                       </label>
                     </div>
@@ -1500,14 +1520,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/1.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/1.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Desi Outdoor Sconce
                     </h2>
@@ -1518,14 +1538,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/2.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/2.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Mirren Modular Corner Chair
                     </h2>
@@ -1536,14 +1556,14 @@
               <li class="product-item product-item--sale">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/3.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/3.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Sherpa Atticus Armchair
                     </h2>
@@ -1555,14 +1575,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/4.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/4.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Isolde Hexagonal Ottoman
                     </h2>
@@ -1573,14 +1593,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/5.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/5.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Lyre Chesterfield Sofa
                     </h2>
@@ -1591,14 +1611,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/6.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/6.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Mirren Chaise Sectional
                     </h2>
@@ -1609,14 +1629,14 @@
               <li class="product-item product-item--new">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/7.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/7.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Rivona Chair
                     </h2>
@@ -1627,14 +1647,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/8.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/8.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Edlyn Leather Bench
                     </h2>
@@ -1645,14 +1665,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/9.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/9.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Desi Outdoor Sconce
                     </h2>
@@ -1663,14 +1683,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/10.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/10.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Gwinnette Chaise
                     </h2>
@@ -1681,14 +1701,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/11.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/11.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Relaxed Saguaro Sofa
                     </h2>
@@ -1699,14 +1719,14 @@
               <li class="product-item product-item--new">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/12.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/12.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Desi Outdoor Sconce
                     </h2>
@@ -1717,14 +1737,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/13.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/13.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Modular One-Arm Loveseat
                     </h2>
@@ -1735,14 +1755,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/14.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/14.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Mina Bench
                     </h2>
@@ -1753,14 +1773,14 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/15.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/15.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Havana Chair
                     </h2>
@@ -1771,14 +1791,14 @@
               <li class="product-item product-item--sale">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/16.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/16.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       Lyre Chesterfield Chair
                     </h2>
@@ -1790,32 +1810,32 @@
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/17.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/17.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
-                      Edlyn chair
+                      Katina Sleeper Chair
                     </h2>
                   </a>
-                  <span class="product-item__price">USD 2293.00</span>
+                  <span class="product-item__price">USD 1835.00</span>
                 </article>
               </li>
               <li class="product-item">
                 <article>
                   <div class="product-item__img-box">
-                    <a class="link-focus" href="#" aria-label="Go to product">
+                    <a class="link-focus" href="product-details.html" aria-label="Go to product">
                       <picture>
                         <source srcset="images/content/catalog/18.webp" type="image/webp">
                         <img class="product-item__img" src="images/content/catalog/18.jpg" alt="">
                       </picture>
                     </a>
                   </div>
-                  <a class="product-item__name-link" href="#">
+                  <a class="product-item__name-link" href="product-details.html">
                     <h2 class="product-item__name">
                       bIsolde Ottoman
                     </h2>
@@ -1863,6 +1883,12 @@
       </form>
     </div>
   </aside>
+
+  <div class="to-top">
+    <button class="to-top__btn" type="button">
+      <span class="visually-hidden">Back to top</span>
+    </button>
+  </div>
 
   <footer class="footer">
     <div class="container">
