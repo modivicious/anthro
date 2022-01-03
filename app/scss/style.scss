@@ -7,7 +7,7 @@
 //----------- header -----------
 
 .header {
-  padding-top: 20px;
+  padding: 10px 0;
   z-index: 1200;
   position: absolute;
   top: 0;
@@ -35,10 +35,11 @@
   margin: 0 auto;
   position: relative;
   &__btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
+    margin-left: -15px;
     z-index: 200;
   }
   &__btn-open {
@@ -55,25 +56,25 @@
     }
   }
   .overlay {
-    top: 60px;
+    top: 69px;
     background-color: rgba(0, 0, 0, 0.18);
   }
   &__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-rows: max-content;
     overflow-y: auto;
     gap: 12px;
     @extend %mont-500;
     font-size: 17px;
     text-transform: uppercase;
     position: fixed;
+    top: 69px;
     bottom: 0;
     left: 0;
-    right: 0;
     z-index: 180;
     width: 320px;
-    padding: 38px 23px 0 38px;
-    height: calc(100vh - 60px);
+    padding: 38px 23px 28px 38px;
+    min-height: calc(100vh - 69px);
     background-color: #fff;
     transform: translateX(-100%);
     will-change: transform;
@@ -106,37 +107,37 @@
     span {
       border-bottom: 1px solid transparent;
     }
-    &.menu__list-link--active {
-      span {
-        border-color: $default;
-      }
+    &.menu__list-link--active span {
+      border-color: $default;
     }
     &:hover {
       color: $hover;
-      &.menu__list-link--active {
-        span {
-          border-color: $hover;
-        }
+      &.menu__list-link--active span {
+        border-color: $hover;
       }
     }
   }
   &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    height: 50px;
     z-index: 200;
   }
   &__icons {
     display: flex;
-    gap: 13px;
+    margin-right: -11px;
     z-index: 200;
   }
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 22px;
-    height: 22px;
+    width: 36px;
+    height: 50px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -151,12 +152,61 @@
   }
   &__count {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 14px;
+    right: 7px;
     background-color: $default;
     width: 8px;
     height: 8px;
     border-radius: 50%;
+  }
+}
+
+.search {
+  display: none;
+  position: absolute;
+  top: 69px;
+  left: 0;
+  right: 0;
+  padding: 10px 0 20px;
+  background-color: #fff;
+  box-shadow: 0 7px 10px rgba(#222, 0.2);
+  &__inner {
+    display: flex;
+    position: relative;
+    border: 1px solid $gray;
+  }
+  &__label {
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+    height: 44px;
+    padding: 15px 66px 15px 20px;
+    border: none;
+    font-size: 16px;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-left: 1px solid $gray;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &.search--home {
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 
@@ -358,8 +408,7 @@
   padding: 30px 0 40px;
   background-color: $main-gray;
   &__list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 40px;
   }
   &__item {
@@ -416,9 +465,7 @@
   &__slider {
     .slick-arrow {
       position: absolute;
-      top: 75px;
-      width: 44px;
-      height: 44px;
+      top: 43px;
       z-index: 30;
       path {
         transition: all 0.1s;
@@ -430,10 +477,12 @@
       }
     }
     .slick-prev {
-      left: -16px;
+      left: 0;
+      padding: 40px 26px 40px 0;
     }
     .slick-next {
-      right: -16px;
+      right: 0;
+      padding: 40px 0 40px 26px;
     }
   }
   &__slide {
@@ -524,31 +573,32 @@
 .blog {
   &__filter {
     margin: 20px 0 50px;
+    padding: 13px 0;
     border-top: 1px solid $light-gray;
     border-bottom: 1px solid $light-gray;
-    padding: 20px 0;
   }
   &__filter-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 14px 30px;
+    // gap: 14px 0;
   }
   &__btn {
+    display: block;
+    padding: 7px 14px;
     @extend %mont-500;
     font-size: 13px;
     text-transform: uppercase;
     &.mixitup-control-active {
       color: $gray;
     }
-    &:hover {
+    &:not(.mixitup-control-active):hover {
       color: $hover;
     }
   }
-  &__article {
-    &:not(:last-child) {
-      margin-bottom: 70px;
-    }
+  &__list {
+    display: grid;
+    gap: 70px;
   }
   &__link {
     &:hover {
@@ -621,6 +671,7 @@
   }
   &__img {
     object-fit: cover;
+    object-position: bottom;
     height: 343px;
     width: 100%;
   }
@@ -672,8 +723,7 @@
     margin-bottom: 21px;
   }
   &__form-box {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 11px;
     margin-bottom: 11px;
   }
@@ -878,11 +928,11 @@
   }
   &__inner {
     display: flex;
-    gap: 22px;
     position: relative;
   }
   &__img-box {
     position: relative;
+    margin-right: 22px;
   }
   &__img {
     object-fit: cover;
@@ -908,7 +958,6 @@
     font-size: 12px;
     display: flex;
     align-items: center;
-    gap: 5px;
     line-height: 1;
   }
   &__color {
@@ -916,6 +965,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
+    margin-left: 5px;
     &--green {
       background-color: #605c37;
     }
@@ -926,7 +976,7 @@
       background-color: #7e4933;
     }
   }
-  .jq-number {
+  .number {
     margin-bottom: 18px;
   }
   &__price-box {
@@ -1043,13 +1093,13 @@
   }
   &__info {
     display: flex;
-    align-items: center;
-    gap: 17px;
+    align-items: baseline;
     margin-bottom: 23px;
   }
   &__chosen {
     font-size: 18px;
     letter-spacing: 0.01em;
+    margin-right: 17px;
   }
   &__results {
     font-size: 14px;
@@ -1170,7 +1220,8 @@
     margin-bottom: 7px;
   }
   &__pay {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: center;
     gap: 25px;
   }
@@ -1265,7 +1316,9 @@
 }
 
 .socials {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
   gap: 10px;
   &__link {
     display: flex;

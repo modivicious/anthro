@@ -115,7 +115,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   visibility: hidden;
   opacity: 0;
@@ -233,6 +233,31 @@ body {
     left: 0;
     transition: all 0.2s ease-out;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-top: 6px solid $gray;
+    border-right: 6px solid $gray;
+    border-bottom: 6px solid $gray;
+    border-left: 4px solid transparent;
+    animation: rotate 1.2s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .logo--dark {
@@ -245,7 +270,7 @@ body {
   @extend %mont-500;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  row-gap: 5px;
   list-style-type: none;
   position: relative;
   z-index: 90;
@@ -254,6 +279,7 @@ body {
     font-size: 12px;
     &:not(:last-child) {
       padding-right: 10px;
+      margin-right: 5px;
       &::after {
         content: "/";
         position: absolute;
@@ -277,63 +303,34 @@ body {
   gap: 17px 15px;
 }
 
-.count {
-  @extend %neue-400;
-  font-size: 16px;
-  color: $default;
-}
-
-// number
-.jq-number {
+.number {
   width: 107px;
   height: 38px;
-  border: 1px solid $gray;
-  padding: 0;
-  position: relative;
-}
+  border: 1px solid #9c9fa6;
+  @extend %neue-400;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
 
-.jq-number__field {
-  width: 39px;
-  height: 36px;
-  border: none;
-  border-right: 1px solid $light-gray;
-  border-left: 1px solid $light-gray;
-  border-radius: 0;
-  box-shadow: none;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.jq-number__field input {
-  padding: 9px 0 8px;
-  width: 37px;
-  height: 35px;
-  text-align: center;
-  border: none;
-}
-
-.jq-number__spin {
-  position: absolute;
-  top: 0;
-  width: 33px;
-  height: 36px;
-  cursor: pointer;
-}
-
-.jq-number__spin:after {
-  content: "-";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.jq-number__spin.plus {
-  right: 0;
-}
-
-.jq-number__spin.plus::after {
-  content: "+";
+  &__input {
+    border: none;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    width: 37px;
+    height: 100%;
+    color: $default;
+    text-align: center;
+    // Chrome
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+    // Mozilla
+    -moz-appearance: textfield;
+  }
+  &__spin {
+    width: 33px;
+  }
 }
 
 // select
@@ -401,8 +398,9 @@ body {
 }
 
 .pagination {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
   align-items: center;
   gap: 15px;
   &__angle {
@@ -504,9 +502,12 @@ body {
     width: 216px;
   }
   &__title {
+    width: 100%;
+    display: block;
     @extend %mont-500;
     font-size: 15px;
     text-transform: uppercase;
+    text-align: left;
     padding-bottom: 3px;
     border-bottom: 1px solid $default;
     cursor: pointer;

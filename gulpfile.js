@@ -6,8 +6,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const webpConvert = require("gulp-webp");
-const del = require("del");
 const webpDel = require("del");
+const del = require("del");
 const { notify } = require("browser-sync");
 const browserSync = require("browser-sync").create();
 
@@ -40,7 +40,7 @@ function scripts() {
     "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/mixitup/dist/mixitup.min.js",
     "node_modules/rateyo/min/jquery.rateyo.min.js",
-    "node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
+    "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
@@ -54,7 +54,7 @@ function images() {
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.mozjpeg({ quality: 90, progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
@@ -75,7 +75,7 @@ function webpDelete() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], {
+  return src(["app/**/*.html", "app/fonts/*", "app/**/manifest.json", "app/css/style.min.css", "app/js/main.min.js"], {
     base: "app",
   }).pipe(dest("dist"));
 }

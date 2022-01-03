@@ -139,11 +139,19 @@
         margin-bottom: 80px;
       }
     }
-    &__content p{
+    &__content p {
       font-size: 16px;
     }
     &__filter-list {
       justify-content: space-between;
+    }
+    &__filter-item {
+      &:first-child .blog__btn {
+        padding-left: 0;
+      }
+      &:last-child .blog__btn {
+        padding-right: 0;
+      }
     }
   }
 
@@ -169,11 +177,12 @@
     }
     &__subtitle {
       margin-bottom: 0;
-      max-width: 140px;
       width: 100%;
     }
     &__info-inner {
-      display: flex;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 140px auto;
       gap: 20px;
       p {
         max-width: 309px;
@@ -194,10 +203,10 @@
     margin-bottom: 80px;
   }
   .breadcrumbs {
-    gap: 7px;
     &__item {
       &:not(:last-child) {
         padding-right: 12px;
+        margin-right: 7px;
       }
     }
   }
@@ -218,6 +227,9 @@
     &__item {
       padding: 40px 0;
     }
+    &__img-box {
+      margin-right: 15px;
+    }
     &__img {
       width: 215px;
       height: 250px;
@@ -231,14 +243,14 @@
       margin-bottom: 9px;
     }
     &__color-wrapper {
-      gap: 10px;
       font-size: 15px;
     }
     &__color {
       width: 16px;
       height: 16px;
+      margin-left: 10px;
     }
-    .jq-number {
+    .number {
       margin-bottom: 26px;
     }
     &__price-box {
@@ -302,7 +314,7 @@
     max-width: 768px;
     padding: 0 25px;
   }
-  .to-top{
+  .to-top {
     left: 50px;
     bottom: 25px;
   }
@@ -320,20 +332,21 @@
       }
     }
     &__list {
-      display: flex;
-      flex-direction: row;
+      grid-auto-flow: column;
+      justify-content: center;
       overflow-y: unset;
       gap: 30px;
       font-size: 15px;
       text-transform: capitalize;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
       bottom: unset;
-      left: 50%;
-      transform: translateX(-50%);
-      right: unset;
       width: auto;
+      min-height: auto;
       padding: unset;
-      height: auto;
       background-color: unset;
     }
     .categories {
@@ -401,6 +414,7 @@
       left: calc(50vw - 142px);
       height: 100vh;
       align-items: center;
+      border-left: 1px solid $light-gray;
     }
     &__nesting {
       display: grid;
@@ -450,11 +464,8 @@
       font-size: 23px;
     }
     &__list {
-      flex-direction: row;
+      grid-auto-flow: column;
       gap: 18px;
-    }
-    &__item {
-      width: 33%;
     }
   }
   .bestsellers {
@@ -487,6 +498,17 @@
   }
   .feedback {
     padding: 110px 0;
+    &__slider {
+      .slick-arrow {
+        top: 13px;
+      }
+      .slick-prev {
+        padding: 70px 50px 70px 0;
+      }
+      .slick-next {
+        padding: 70px 0 70px 50px;
+      }
+    }
     &__slide {
       background-size: 212px 201px;
       p {
@@ -596,12 +618,15 @@
     &__filter {
       margin-bottom: 40px;
     }
+    &__list {
+      gap: 0;
+    }
     &__img {
       margin-bottom: 0;
     }
     &__content {
       margin-left: 15px;
-      p{
+      p {
         font-size: 20px;
       }
     }
@@ -629,17 +654,18 @@
 
   .product {
     .breadcrumbs {
-      justify-content: flex-end;
-      margin-bottom: -14px;
+      grid-column: 2;
     }
     &__info {
-      display: flex;
-      gap: 27px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      column-gap: 27px;
       margin-bottom: 110px;
     }
     &__photos {
       width: 340px;
       height: 414px;
+      grid-row: 1/3;
       margin-bottom: 0;
       .slick-dots {
         top: 50%;
@@ -658,12 +684,14 @@
       margin-left: auto;
     }
     &__content {
-      margin: 25px 0 0 0;
+      margin: 0;
     }
     &__price {
       margin-bottom: 23px;
     }
     &__form-box {
+      grid-auto-flow: column;
+      grid-template-columns: max-content;
       gap: 13px;
       margin-bottom: 17px;
     }
@@ -684,6 +712,7 @@
       }
     }
     &__info-inner {
+      grid-template-columns: 245px auto;
       gap: 63px;
       p {
         font-size: 17px;
@@ -691,7 +720,6 @@
       }
     }
     &__subtitle {
-      max-width: 245px;
       font-size: 30px;
     }
     &__dimensios-item {
@@ -764,7 +792,6 @@
     }
     &__inner {
       align-items: center;
-      gap: 15px;
     }
     &__img {
       width: 107px;
@@ -787,7 +814,7 @@
     &__color-wrapper {
       font-size: 13px;
     }
-    .jq-number {
+    .number {
       margin: 0 84px 0 0;
     }
     &__price-box {
@@ -992,10 +1019,6 @@
   }
 
   .product {
-    .breadcrumbs {
-      justify-content: unset;
-      margin-left: 491px;
-    }
     &__photos {
       width: 465px;
       height: 468px;
@@ -1011,7 +1034,7 @@
       width: 203px;
     }
     &__form-box {
-      flex-direction: column;
+      grid-auto-flow: row;
       gap: 17px;
     }
     &__btn-box {
@@ -1040,8 +1063,8 @@
         margin-right: 126px;
       }
     }
-    &__inner {
-      gap: 107px;
+    &__img-box {
+      margin-right: 107px;
     }
     &__img {
       width: 138px;
@@ -1055,7 +1078,7 @@
       max-width: 266px;
       margin-bottom: 11px;
     }
-    .jq-number {
+    .number {
       margin-right: 100px;
     }
   }
@@ -1121,7 +1144,7 @@
     padding-top: 150px;
   }
   .list {
-    gap: 30px;
+    gap: 29px;
     grid-auto-columns: 263px;
   }
   .product-item {
@@ -1151,7 +1174,7 @@
     &__name {
       max-width: 284px;
     }
-    &__item p{
+    &__item p {
       max-width: 353px;
     }
     &__name,
@@ -1184,8 +1207,9 @@
   }
 
   .product {
-    .breadcrumbs {
-      margin-left: 588px;
+    &__info {
+      justify-content: start;
+      column-gap: 31px;
     }
     &__photos {
       width: 557px;
@@ -1241,12 +1265,12 @@
     &__item {
       padding: 20px 0;
     }
+    &__img-box {
+      margin-right: 128px;
+    }
     &__img {
       width: 163px;
       height: 152px;
-    }
-    &__inner {
-      gap: 128px;
     }
     &__descr {
       width: 327px;
@@ -1260,7 +1284,7 @@
     &__color-wrapper {
       font-size: 15px;
     }
-    .jq-number {
+    .number {
       margin-right: 88px;
     }
     &__old-price {

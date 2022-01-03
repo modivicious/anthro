@@ -1,4 +1,35 @@
 $(function () {
+
+  const images = document.querySelectorAll("[data-src], [data-srcset]"); // lazy load
+
+  function preloadImage(img) {
+    if (img.dataset.srcset) {
+      img.srcset = img.getAttribute("data-srcset");
+    } else if (img.dataset.src) {
+      img.src = img.getAttribute("data-src");
+    }
+  }
+
+  const imgOptions = {
+    threshold: 0,
+    rootMargin: "200px 0px 200px 0px",
+  };
+
+  const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      else {
+        preloadImage(entry.target);
+        imgObserver.unobserve(entry.target);
+      }
+    });
+  }, imgOptions);
+
+  images.forEach((image) => {
+    imgObserver.observe(image);
+  });
+
+
   const screenWidth = window.screen.width;
   const screenHeight = window.screen.height;
 
@@ -40,16 +71,6 @@ $(function () {
     $(this).next().slideToggle();
   });
 
-  $(".filter-btn, .catalog__control .overlay").on("click", function () {
-    $(".filter").toggleClass("filter--active");
-    $(".catalog__control .overlay").toggleClass("overlay--active");
-  });
-
-  $(".filter__title").on("click", function () {
-    $(this).closest(".filter__item").toggleClass("filter__item--open");
-    $(this).next().slideToggle();
-  });
-
   $(".product__link").on("click", function (e) {
     e.preventDefault();
     var id = $(this).attr("href"),
@@ -76,6 +97,12 @@ $(function () {
   $(".menu__btn").on("click", () => toggleMenu());
   $(".menu .overlay").on("click", () => toggleMenu());
 
+  $(".menu__search-btn").on("click", function () {
+    if (screenWidth < 768 && $(".menu__list").hasClass("menu__list--active"))
+      toggleMenu();
+    $(".search").slideToggle();
+  });
+
   $(".intro__btn-start").on("click", function () {
     $(".intro__shop").addClass("intro__shop--active");
     if (screenWidth > 767) $(".intro__descr").css("z-index", "10000");
@@ -94,14 +121,9 @@ $(function () {
     }
   });
 
-  // $(".intro__link").on("mouseenter", function () {
-  //   $(".intro__link--active").removeClass("intro__link--active");
-  //   $(this).addClass("intro__link--active");
-  //   $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
-  //   $(this).next().toggleClass("intro__nesting-box--active");
-  // });
-
-  $(".intro__link").on("click", function () {
+  $(".intro__link").on("pointerenter click", function () {
+    $(".intro__link--active").removeClass("intro__link--active");
+    $(this).addClass("intro__link--active");
     $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
     $(this).next().toggleClass("intro__nesting-box--active");
     $(".intro__btn-back").toggleClass("return");
@@ -118,6 +140,47 @@ $(function () {
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > screenHeight * 1.5) $(".to-top").addClass("show");
     else $(".to-top").removeClass("show");
+  });
+
+  function freeClick(e, elem, action, triggerElem, activeClass) {
+    if (
+      !elem.is(e.target) && // if click was not on our element
+      elem.has(e.target).length === 0 && // and not on its children
+      !$(e.target).hasClass(triggerElem) && // not a trigger button ...
+      !$(e.target).parents().hasClass(triggerElem) // ...and elements not nested in the button
+    )
+      switch (action) {
+        case "slideUp":
+          elem.slideUp(); // slide conflict
+          break;
+        case "removeClass":
+          elem.removeClass(activeClass);
+          break;
+      }
+  }
+
+  $(".filter-btn").on("click", function () {
+    $(".filter").toggleClass("filter--active");
+  });
+
+  $(document).on("mouseup", function (e) {
+    freeClick(e, $(".filter"), "removeClass", "filter-btn", "filter--active");
+    freeClick(e, $(".search"), "slideUp", "menu__search-btn");
+  });
+
+  $(".filter__title").on("click", function () {
+    $(this).closest(".filter__item").toggleClass("filter__item--open");
+    $(this).next().slideToggle();
+  });
+
+  $(".minus").on("click", function () {
+    const input = $(this).next(".number__input");
+    if (input.val() > 1) input.val(+input.val() - 1);
+  });
+
+  $(".plus").on("click", function () {
+    const input = $(this).prev(".number__input");
+    if (input.val() < +input.attr("max")) input.val(+input.val() + 1);
   });
 
   if (screenWidth < 768) {
