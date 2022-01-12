@@ -121,17 +121,25 @@ $(function () {
     }
   });
 
-  $(".intro__link").on("pointerenter click", function () {
-    $(".intro__link--active").removeClass("intro__link--active");
-    $(this).addClass("intro__link--active");
-    $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
-    $(this).next().toggleClass("intro__nesting-box--active");
-    $(".intro__btn-back").toggleClass("return");
+  $(".intro__link").on("click", function () {
     if (screenWidth < 768) {
+      introDrop(this);
       $(".intro__list").css("overflow-y", "unset");
       $(".intro__link").css("display", "none");
     }
   });
+
+  $(".intro__link").on("mouseenter", function () {
+    if (screenWidth > 767) introDrop(this);
+  });
+
+  function introDrop(e) {
+    $(".intro__link--active").removeClass("intro__link--active");
+    $(e).addClass("intro__link--active");
+    $(".intro__nesting-box--active").removeClass("intro__nesting-box--active");
+    $(e).next().toggleClass("intro__nesting-box--active");
+    $(".intro__btn-back").toggleClass("return");
+  }
 
   $(".to-top__btn").on("click", function () {
     $("body, html").animate({ scrollTop: 0 }, 300);

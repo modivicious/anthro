@@ -413,7 +413,9 @@
     &__nesting-box {
       left: calc(50vw - 142px);
       height: 100vh;
+      justify-content: start;
       align-items: center;
+      padding-left: 118px;
       border-left: 1px solid $light-gray;
     }
     &__nesting {
