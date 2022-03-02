@@ -1,6 +1,6 @@
 $(function () {
 
-  const images = document.querySelectorAll("[data-src], [data-srcset]"); // lazy load
+  const images = document.querySelectorAll("[data-src], [data-srcset]");
 
   function preloadImage(img) {
     if (img.dataset.srcset) {
@@ -16,7 +16,7 @@ $(function () {
   };
 
   const imgObserver = new IntersectionObserver((entries, imgObserver) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       else {
         preloadImage(entry.target);
@@ -25,10 +25,9 @@ $(function () {
     });
   }, imgOptions);
 
-  images.forEach((image) => {
+  images.forEach(image => {
     imgObserver.observe(image);
   });
-
 
   const screenWidth = window.screen.width;
   const screenHeight = window.screen.height;
@@ -73,7 +72,7 @@ $(function () {
 
   $(".product__link").on("click", function (e) {
     e.preventDefault();
-    var id = $(this).attr("href"),
+    let id = $(this).attr("href"),
       top = $(id).offset().top;
     $("body,html").animate({ scrollTop: top }, 400);
   });
@@ -192,7 +191,7 @@ $(function () {
   });
 
   if (screenWidth < 768) {
-    var lastScroll = 0;
+    let lastScroll = 0;
     const header = document.querySelector(".header");
 
     const scrollPosition = () =>
