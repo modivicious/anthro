@@ -76,11 +76,11 @@
     padding: 38px 23px 28px 38px;
     min-height: calc(100vh - 69px);
     background-color: #fff;
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
     will-change: transform;
     transition: all 0.2s;
     &.menu__list--active {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   .categories {
@@ -257,7 +257,7 @@
     }
   }
   &__shop {
-    transform: translateY(100%);
+    transform: translate3d(0, 100%, 0);
     transition: all 0.2s;
     position: absolute;
     z-index: 0;
@@ -271,7 +271,7 @@
     justify-content: center;
     align-content: center;
     &.intro__shop--active {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
   &__shop-logo {

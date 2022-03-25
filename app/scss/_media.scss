@@ -386,14 +386,14 @@
     &__shop {
       width: calc(50vw - 142px);
       transform: unset;
-      transform: translateX(-200%);
+      transform: translate3d(-200%, 0, 0);
       justify-content: unset;
       & > * {
         width: 230px;
         margin-left: auto;
       }
       &.intro__shop--active {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
     &__shop-logo {
